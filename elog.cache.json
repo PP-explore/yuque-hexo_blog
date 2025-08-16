@@ -17,15 +17,15 @@
     {
       "id": 232300503,
       "doc_id": "no0omupx3c7yplek",
-      "updated": 1755265974000,
+      "updated": 1755354556000,
       "properties": {
         "title": "Travis 构建 博客  失败经验",
         "date": "2025-08-13 21:14:11",
-        "updated": "2025-08-15 21:52:54"
+        "updated": "2025-08-16 22:29:16"
       },
       "catalog": [],
       "realName": "Travis 构建 博客  失败经验",
-      "relativePath": "\\Travis 构建 博客  失败经验.md",
+      "relativePath": "/Travis 构建 博客  失败经验.md",
       "docPath": "./source/_posts"
     },
     {
@@ -225,15 +225,73 @@
       "realName": "计算机系统",
       "relativePath": "\\计算机系统.md",
       "docPath": "./source/_posts"
+    },
+    {
+      "id": 232611330,
+      "doc_id": "fgakqfskar80g3dv",
+      "updated": 1755269760000,
+      "properties": {
+        "title": "测试是否成功部署????",
+        "date": "2025-08-15 22:54:35",
+        "updated": "2025-08-15 22:56:00"
+      },
+      "catalog": [],
+      "realName": "测试是否成功部署",
+      "relativePath": "/测试是否成功部署.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 232707341,
+      "doc_id": "uochp1gysrcde1mk",
+      "updated": 1755354589000,
+      "properties": {
+        "title": "再次测试",
+        "date": "2025-08-16 22:29:15",
+        "updated": "2025-08-16 22:29:49"
+      },
+      "catalog": [],
+      "realName": "再次测试",
+      "relativePath": "/再次测试.md",
+      "docPath": "./source/_posts"
     }
   ],
   "catalog": [
     {
       "type": "DOC",
+      "title": "再次测试",
+      "uuid": "ZHIBY3GyxkyUMsC9",
+      "url": "uochp1gysrcde1mk",
+      "prev_uuid": "",
+      "sibling_uuid": "nU4GGWxaPjjcm192",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 232707341,
+      "level": 0,
+      "id": 232707341,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
+      "type": "DOC",
+      "title": "测试是否成功部署????",
+      "uuid": "nU4GGWxaPjjcm192",
+      "url": "fgakqfskar80g3dv",
+      "prev_uuid": "ZHIBY3GyxkyUMsC9",
+      "sibling_uuid": "C_zyRLsJDwWLhneR",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 232611330,
+      "level": 0,
+      "id": 232611330,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
       "title": "Travis 构建 博客  失败经验",
       "uuid": "C_zyRLsJDwWLhneR",
       "url": "no0omupx3c7yplek",
-      "prev_uuid": "",
+      "prev_uuid": "nU4GGWxaPjjcm192",
       "sibling_uuid": "rssGOEN1a3VHfUnm",
       "child_uuid": "",
       "parent_uuid": "",
