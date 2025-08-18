@@ -1,7 +1,7 @@
 ---
 title: Travis 构建 博客  失败经验
 date: '2025-08-13 21:14:11'
-updated: '2025-08-16 22:29:16'
+updated: '2025-08-17 21:23:10'
 ---
 使用ssh连接github
 
@@ -138,11 +138,91 @@ D:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/travis-1.14.0/lib/travis/cli/command.rb:3
 
 
 
-Elog
+# <font style="color:rgb(240, 246, 252);background-color:rgb(13, 17, 23);">语雀 + Hexo + GitHub Actions + Vercel 博客</font>
 
-Halo
 
-hexo
+
+
+
+
+![](/images/d239078f8ca69b74b5d4948627ba8bea.png)
+
+
+
+
+
+通过 本地定时任务 实现定期调用 Webhook URL。以下是详细实现方案：
+
+📌 终极解决方案：本地定时任务 + 开机自启  
+⚙️ 适用场景  
+•  
+电脑需保持开机（建议用闲置设备或服务器）
+
+•  
+无需依赖语雀 Webhook
+
+•  
+完全可控的定时同步（如每 30 分钟/1 小时）
+
+🛠️ 具体实现步骤  
+方案 1：Windows 任务计划程序（适合 PC）  
+1.  
+创建 PowerShell 脚本
+
+新建 sync.ps1文件，内容如下：
+
+```bash
+替换为你的实际 Webhook URL
+$url = "https://serverless-api-elog.vercel.app/api/github?user=你的GitHub用户名&repo=仓库名&event_type=deploy&token=你的Token"
+调用 Webhook
+$response = Invoke-RestMethod -Uri$url -Method Get
+Write-Output "$(Get-Date) 同步结果:$response"
+可选：记录日志到文件
+Add-Content -Path "$PSScriptRoot\sync.log" -Value "$(Get-Date) $response"
+```
+
+#   
+2.  
+配置任务计划程序
+•  
+打开 任务计划程序 → 右侧 创建任务
+
+•  
+常规 选项卡：
+
+•  
+名称：语雀博客自动同步
+
+•  
+勾选 "不管用户是否登录都要运行"
+
+•  
+勾选 "使用最高权限"
+
+•  
+触发器 选项卡：
+
+•  
+新建 → 选择 "按预定计划" → 设置重复间隔（如 30 分钟）
+
+•  
+操作 选项卡：
+
+•  
+新建 → 程序/脚本填 powershell.exe
+
+•  
+参数填 -ExecutionPolicy Bypass -File "C:\path\to\sync.ps1"
+
+3. 测试运行
+
+右键任务 → 运行，检查 sync.log是否生成成功记录。
+
+
+
+
+
+
 
 
 
