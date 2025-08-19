@@ -17,15 +17,15 @@
     {
       "id": 232300503,
       "doc_id": "no0omupx3c7yplek",
-      "updated": 1755436990000,
+      "updated": 1755597074000,
       "properties": {
-        "title": "Travis 构建 博客  失败经验",
+        "title": "博客构建",
         "date": "2025-08-13 21:14:11",
-        "updated": "2025-08-17 21:23:10"
+        "updated": "2025-08-19 17:51:14"
       },
       "catalog": [],
-      "realName": "Travis 构建 博客  失败经验",
-      "relativePath": "/Travis 构建 博客  失败经验.md",
+      "realName": "博客构建",
+      "relativePath": "/博客构建.md",
       "docPath": "./source/_posts"
     },
     {
@@ -288,7 +288,7 @@
     },
     {
       "type": "DOC",
-      "title": "Travis 构建 博客  失败经验",
+      "title": "博客构建",
       "uuid": "C_zyRLsJDwWLhneR",
       "url": "no0omupx3c7yplek",
       "prev_uuid": "nU4GGWxaPjjcm192",
