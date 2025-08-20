@@ -3,20 +3,27 @@
     {
       "id": 232707341,
       "doc_id": "uochp1gysrcde1mk",
-      "updated": 1755680307000,
+      "updated": 1755683358000,
       "properties": {
-        "title": "再次测试",
+        "title": "测试修改标题",
         "date": "2025-08-16 22:29:15",
-        "updated": "2025-08-20 16:58:27",
+        "updated": "2025-08-20 17:49:18",
         "categories": [
-          "JAVA"
+          "JAVA",
+          "高级特性"
         ],
-        "tag": "随笔"
+        "tags": [
+          "随笔",
+          "技术文档",
+          "配置指南"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [],
-      "realName": "再次测试",
-      "relativePath": "\\再次测试.md",
-      "docPath": "source\\_posts"
+      "realName": "测试修改标题",
+      "relativePath": "/测试修改标题.md",
+      "docPath": "source/_posts"
     },
     {
       "id": 232300503,
@@ -248,7 +255,6 @@
       "realName": "JAVA",
       "relativePath": "/JAVA.md",
       "docPath": "./source/_posts"
-
     },
     {
       "id": 162088360,
@@ -323,16 +329,27 @@
     {
       "id": 232707341,
       "doc_id": "uochp1gysrcde1mk",
-      "updated": 1755678161000,
+      "updated": 1755683358000,
       "properties": {
-        "title": "再次测试",
+        "title": "测试修改标题",
         "date": "2025-08-16 22:29:15",
-        "updated": "2025-08-20 16:22:41"
+        "updated": "2025-08-20 17:49:18",
+        "categories": [
+          "JAVA",
+          "高级特性"
+        ],
+        "tags": [
+          "随笔",
+          "技术文档",
+          "配置指南"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [],
-      "realName": "再次测试",
-      "relativePath": "/再次测试.md",
-      "docPath": "./source/_posts"
+      "realName": "测试修改标题",
+      "relativePath": "/测试修改标题.md",
+      "docPath": "source/_posts"
     }
   ],
   "catalog": [
