@@ -1,3 +1,9 @@
+
+<script>
+  console.log("Tags Data Raw:", <%- JSON.stringify(site.tags) %>);
+  console.log("Tags Array:", <%- JSON.stringify(site.tags.toArray()) %>);
+  console.log("Tags Data:", <%- JSON.stringify(site.tags.toArray()) %>)
+</script>
 <div class="page-title">
     <ul>
         <li><a href="/" data-name="<%= __('home') %>" title="Back Home"><%= __('home') %></a></li>

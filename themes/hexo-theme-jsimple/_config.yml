@@ -108,6 +108,8 @@ clarity:
   enable: false
   configId: 54321
 
+tags_layout: tags
+
 ## Google AdSense.
 adsense:
   auto: false
