@@ -23,10 +23,10 @@ module.exports = {
       outputDir: './source/_posts',
       filename: 'title',
       format: 'markdown',
-      catalog: false,
+      catalog: true,
       frontMatter: {
         enable: true,
-        include: ['categories', 'tags', 'title', 'date', 'updated'],
+        include: ['categories', 'layout','tags','title', 'date', 'updated', 'recommend', 'comment','date', 'updated'],
       },
       formatExt: './format.js',
     }
