@@ -7,7 +7,7 @@ title: PP Blog
 subtitle: '个人学习博客'
 description: '记录并分享个人学习笔记'
 keywords:
-author: PP
+author: 一只笨拙的小小虫
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 ##TODO 网站这里待测试
 url: https://PP-Blog.vercel.app
-permalink: :title/
+permalink: :category/:title
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -70,12 +70,6 @@ index_generator:  #生成帖子归档
   per_page: 10
   order_by: -date
 
-# Category & Tag分类 & 标签
-default_category: uncategorized
-
-#别名
-category_map:
-tag_map:
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -104,7 +98,43 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: hexo-theme-jsimple
+
+# 本地搜索配置，如果此项不配置。主题则无法使用搜索功能
+search:
+  path: search.json
+  field: all
+  content: true
+  
+# 网站地图配置
+## Doc: https://github.com/hexojs/hexo-generator-sitemap#readme
+sitemap:
+  rel: true
+  tags: true
+  categories: true
+  path:
+    - sitemap.xml
+    - sitemap.txt  
+
+# 分类配置，此处需要和主题中一一对应。文章分类不建议设置过多
+default_category: 最新
+category_map:
+  JAVA: Java
+  计算机: ComputerScience
+  人工智能: AI 
+  随笔: SuiBi
+
+ 
+
+#标签别名
+hexo: hexo
+生活: life
+深度学习: DeepLearning
+JAVA: JAVA
+随笔: 随笔
+
+
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
