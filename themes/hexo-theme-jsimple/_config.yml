@@ -36,6 +36,14 @@ menu:
   人工智能: AI 
   随笔: SuiBi
 
+tag_map:
+  hexo: hexo
+  生活: life
+  深度学习: DeepLearning
+  JAVA: JAVA
+  随笔: 随笔
+  计算机: ComputerScience
+
 # 最左侧常驻的导航菜单，一般指向 /about 即可
 left_nav_menus:
 - uri: about

@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 ##TODO 网站这里待测试
-url: https://PP-Blog.vercel.app
+url: https://yuque-hexo-blog-three.vercel.app
 permalink: :category/:title.html
 permalink_defaults:
 pretty_urls:
@@ -131,14 +131,13 @@ category_map:
  
 
 #标签别名
-hexo: hexo
-生活: life
-深度学习: DeepLearning
-JAVA: JAVA
-随笔: 随笔
-计算机: ComputerScience
-
-
+tag_map:
+  hexo: hexo
+  生活: life
+  深度学习: DeepLearning
+  JAVA: JAVA
+  随笔: 随笔
+  计算机: ComputerScience
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
