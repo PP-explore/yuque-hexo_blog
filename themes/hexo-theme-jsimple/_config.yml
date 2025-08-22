@@ -16,7 +16,7 @@ read_mode: day
 # 首页文章排序方式: 最新在前（-1），最老在前（1）
 home_page_sort: -1
 # 首页展示多少篇文章
-home_article_shown: 5
+home_article_shown: 10
 
 # 代码高亮配置，采用 hightlight，样式在 css/hightlight/* 定义
 highlight_theme: atom-one
@@ -100,7 +100,7 @@ analytics:
 
 ## 网站评论，仅支持Disqus。需要别的自行修改源码
 comments:
-  enable: false
+  enable: true
   shortname: pprnb
   configId: 12345
   count: true
