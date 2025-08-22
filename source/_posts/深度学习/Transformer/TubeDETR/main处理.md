@@ -1,7 +1,14 @@
 ---
 title: main处理
 date: '2025-08-05 17:27:58'
-updated: '2025-08-22 16:18:48'
+updated: '2025-08-22 20:34:07'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - TubeDETR
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 ### 参数列表:
   超参数列表:
@@ -254,30 +261,3 @@ train_stats = train_one_epoch(
             writer=writer,
         )
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

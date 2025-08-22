@@ -1,7 +1,12 @@
 ---
 title: Python爬虫
 date: '2023-03-22 10:28:44'
-updated: '2025-08-22 16:21:26'
+updated: '2025-08-22 20:35:34'
+categories:
+  - 技术杂文
+tags: null
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 # <font style="color:rgb(79, 79, 79);">一、都有哪些爬虫？</font>
 + <font style="color:rgb(77, 77, 77);">网络爬虫按照系统结构和实现技术，大致可以分为以下几种类型：</font>**<font style="color:rgb(77, 77, 77);">通用网络爬虫</font>**<font style="color:rgb(77, 77, 77);">、</font>**<font style="color:rgb(77, 77, 77);">聚焦网络爬虫</font>**<font style="color:rgb(77, 77, 77);">、</font>**<font style="color:rgb(77, 77, 77);">增量式网络爬虫</font>**<font style="color:rgb(77, 77, 77);">、</font>**<font style="color:rgb(77, 77, 77);">深层网络爬虫</font>**<font style="color:rgb(77, 77, 77);">。</font>
@@ -128,4 +133,3 @@ HTML网页中，编码格式通常包含在head里
 
 # 八、数据清洗
 脏数据
-

@@ -1,8 +1,21 @@
 ---
 title: Java Web
 date: '2025-03-17 16:46:30'
-updated: '2025-08-22 16:24:36'
+updated: '2025-08-22 20:36:10'
 ---
+```javascript
+
+categories: 
+  - JAVA              # 支持多级分类（数组格式）
+tags:
+  - JAVA
+  - 后端
+cover: /images/custom-cover.jpg  # 封面图绝对路径
+recommend: true       # 是否推荐
+```
+
+
+
 HTML基础结构：
 
 ```java

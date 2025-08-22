@@ -1,7 +1,14 @@
 ---
 title: 模型TubeDETR
 date: '2025-08-08 11:04:59'
-updated: '2025-08-22 16:19:15'
+updated: '2025-08-22 20:35:05'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - TubeDETR
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 TubeDETR 的核心架构包含三个关键组件：
 
@@ -165,4 +172,3 @@ if self.fast:
     src_fast, mask_fast = features_fast[-1].decompose()
     src_fast = self.input_proj(src_fast)  # 投影到Transformer维度
 ```
-

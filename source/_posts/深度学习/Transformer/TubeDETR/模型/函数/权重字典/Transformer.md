@@ -1,7 +1,14 @@
 ---
 title: Transformer
 date: '2025-08-05 17:39:31'
-updated: '2025-08-22 16:19:37'
+updated: '2025-08-22 20:35:14'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - TubeDETR
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 ## transformer.py
 #### **<font style="color:rgba(0, 0, 0, 0.9);">双流编码器-解码器结构</font>**
@@ -1012,46 +1019,3 @@ tgt_cross = (
 
 1. **<font style="color:rgba(0, 0, 0, 0.9);">强制时间对齐</font>**<font style="color:rgba(0, 0, 0, 0.9);">：确保每个时间查询只关注对应帧的视觉特征</font>
 2. **<font style="color:rgba(0, 0, 0, 0.9);">批量计算优化</font>**<font style="color:rgba(0, 0, 0, 0.9);">：在保持时间局部性的前提下实现并行计算</font>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

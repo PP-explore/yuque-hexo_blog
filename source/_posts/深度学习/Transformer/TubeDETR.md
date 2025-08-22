@@ -1,7 +1,14 @@
 ---
 title: TubeDETR
 date: '2025-07-21 10:33:38'
-updated: '2025-08-22 16:18:06'
+updated: '2025-08-22 18:01:07'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - TubeDETR
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 ### 论文逻辑梳理:
 #### **<font style="color:rgba(0, 0, 0, 0.9);">视觉特征</font>**<font style="color:rgba(0, 0, 0, 0.9);"> </font>`<font style="color:rgba(0, 0, 0, 0.9);">x₀(v) ∈ ℝ^(T×HW×d)</font>`
@@ -254,4 +261,4 @@ F(v,s)=[Fv(v,s),hs(v,s)]∈RT×(HW+L)×d
 
 ## <font style="color:rgb(25, 27, 31);">代码解读:</font>
 ### 
-## 
+##

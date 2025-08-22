@@ -1,7 +1,13 @@
 ---
 title: ResNet
 date: '2024-06-17 20:40:59'
-updated: '2025-08-22 16:17:15'
+updated: '2025-08-22 18:01:02'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 参考：
 
@@ -122,10 +128,3 @@ Identity shortcut connections既不会增加额外的更多的参数，也不会
        上图可以看出，针对层次较多的网络，将原有的两个3×3卷积变为了1×1、3×3和1×1的卷积。 在ResNet50、ResNet101和ResNet152中都是用了该结构设计。
 
        最后附上论文中残差网络的实验结果。
-
-
-
-    
-
-
-

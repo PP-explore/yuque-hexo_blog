@@ -1,12 +1,14 @@
 ---
 title: Unix学习
 date: '2025-08-21 16:27:02'
-updated: '2025-08-22 16:22:09'
+updated: '2025-08-22 20:35:43'
+categories:
+  - 计算机
+tags:
+  - 计算机基础
+cover: /images/custom-cover.jpg
+recommend: true
 ---
-
-
-
-
 ```plain
 1. tar 命令
 语法： tar [主选项 + 辅选项] 文件或目录
@@ -371,6 +373,4 @@ https://blog.csdn.net/angle_chen123/article/details/120675472
 
 
 ## 
-## 
-
-
+##

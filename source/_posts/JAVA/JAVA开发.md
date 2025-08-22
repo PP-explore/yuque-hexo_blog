@@ -1,8 +1,18 @@
 ---
 title: JAVA开发
 date: '2025-02-15 16:35:12'
-updated: '2025-08-21 15:52:34'
+updated: '2025-08-22 20:36:16'
 ---
+```javascript
+categories: 
+  - JAVA              # 支持多级分类（数组格式）
+tags:
+  - JAVA
+  - 后端
+cover: /images/custom-cover.jpg  # 封面图绝对路径
+recommend: true       # 是否推荐
+```
+
 ## JDK的组成
 + JVM（Java Virtual Machine)：Java虚拟机，真正运行]ava程序的地方。
 + 核心类库：Java自己写好的程序，给程序员自己的程序调用的。  

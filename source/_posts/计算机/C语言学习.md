@@ -1,7 +1,14 @@
 ---
 title: C语言学习
 date: '2024-03-06 15:26:33'
-updated: '2025-08-22 16:22:41'
+updated: '2025-08-22 20:35:47'
+categories:
+  - 计算机
+tags:
+  - 计算机基础
+  - C语言
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 # 存储类型
 ## C语言每个变量具有三大特性：存储期限、作用域、链接
@@ -368,5 +375,3 @@ float *search(float(*point)[4],int n){
 | <font style="color:rgb(51, 51, 51);">5</font> | [double floor(double x)](https://www.runoob.com/cprogramming/c-function-floor.html)<br/><font style="color:rgb(51, 51, 51);">   </font><font style="color:rgb(51, 51, 51);">返回小于或等于 x 的最大的整数值。</font> |
 | <font style="color:rgb(51, 51, 51);">6</font> | **<font style="color:rgb(77, 77, 77);">round()</font>**<font style="color:rgb(77, 77, 77);">： 四舍五入成整数</font><br/>```c round(2.3)=2, round(-2.5)=-3 ```  |
 | <font style="color:rgb(51, 51, 51);">7</font> | <font style="color:rgb(198, 120, 221);">int </font><font style="color:rgb(97, 174, 238);">abs </font><font style="color:rgb(153, 153, 153);">(</font><font style="color:rgb(198, 120, 221);">int</font><font style="color:rgb(171, 178, 191);background-color:rgb(40, 44, 52);"> n </font><font style="color:rgb(153, 153, 153);">);</font><br/>求整数的绝对值 |
-
-

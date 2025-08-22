@@ -1,7 +1,14 @@
 ---
 title: Python
 date: '2023-04-02 14:00:00'
-updated: '2025-08-22 16:22:28'
+updated: '2025-08-22 20:35:44'
+categories:
+  - 计算机
+tags:
+  - 计算机基础
+  - Python
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 # 一、python如何运行程序
 python解释器（python标准实现形式）
@@ -991,4 +998,3 @@ def watch_china_node(data,state):
     print("china node")
     
 ```
-

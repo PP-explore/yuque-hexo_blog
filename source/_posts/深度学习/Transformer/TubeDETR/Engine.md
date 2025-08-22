@@ -1,7 +1,14 @@
 ---
 title: Engine
 date: '2025-08-06 16:42:10'
-updated: '2025-08-22 16:18:55'
+updated: '2025-08-22 20:34:11'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - TubeDETR
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 ```python
 # 初始化指标记录器
@@ -33,4 +40,3 @@ updated: '2025-08-22 16:18:55'
 
 
 <font style="color:rgba(255, 255, 255, 0.6);background-color:rgb(29, 29, 29);">模型前向传播</font>
-

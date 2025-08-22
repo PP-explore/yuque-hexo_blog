@@ -1,7 +1,14 @@
 ---
 title: 知乎Transformer文章阅读记录
 date: '2025-01-02 20:27:37'
-updated: '2025-08-22 16:20:09'
+updated: '2025-08-22 20:35:21'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - Transformer
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 <font style="color:#000000;">三万字最全解析！从零实现Transformer: </font>[https://zhuanlan.zhihu.com/p/648127076](https://zhuanlan.zhihu.com/p/648127076)
 
@@ -25,4 +32,3 @@ updated: '2025-08-22 16:20:09'
 ![](/images/0c57384d53dd717501829146c35e7255.png)
 
 这里causal mask就是对self attention中QK内积之后必定输出为n*n方阵， ，Causal Mask 是在计算注意力分数矩阵 QK^T 后，执行 Softmax 之前引入的。它的作用是通过屏蔽未来位置的信息，确保当前时间步的预测只能依赖于已知的过去和当前的信息。  ![](/images/8bb07aa29a9fc32fd8b440069bdcc56b.png)
-

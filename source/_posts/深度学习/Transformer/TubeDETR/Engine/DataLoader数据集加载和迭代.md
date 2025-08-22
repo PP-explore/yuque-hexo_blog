@@ -1,7 +1,14 @@
 ---
 title: DataLoader数据集加载和迭代
 date: '2025-08-06 17:12:44'
-updated: '2025-08-22 16:19:03'
+updated: '2025-08-22 20:35:00'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - TubeDETR
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 ```python
             data_loader_train = DataLoader(
@@ -213,4 +220,3 @@ final_batch["inter_idx"] = [tmp_target0['inter_idx'], ...]   # 动作起止索�
 
 
 [从DETR backbone 的NestedTensor 到DataLoader, Sampler,collate_fn，再到DETR transformer_detr的backbone-CSDN博客](https://blog.csdn.net/qq_35831906/article/details/124524455)
-

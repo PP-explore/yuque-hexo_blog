@@ -1,7 +1,12 @@
 ---
 title: Docker
 date: '2024-12-16 19:53:33'
-updated: '2025-08-22 16:20:57'
+updated: '2025-08-22 20:35:28'
+categories:
+  - 技术杂文
+tags: null
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 | **<font style="color:rgb(212, 208, 201);">概念</font>** | **<font style="color:rgb(212, 208, 201);">说明</font>** |
 | --- | --- |
@@ -103,4 +108,3 @@ docker save -o your_image_name.tar your_image_name:tag
 ```plain
 docker load -i /path/to/your_image_name.tar
 ```
-

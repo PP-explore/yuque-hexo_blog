@@ -1,7 +1,13 @@
 ---
 title: Pytorch  nn.Module
 date: '2025-01-03 20:07:29'
-updated: '2025-08-22 16:17:02'
+updated: '2025-08-22 18:00:57'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 # <font style="color:rgb(34, 34, 38);">nn.Module类——使用Module类来自定义模型</font>
 pytorch中其实一般没有特别明显的Layer和Module的区别，不管是**自定义层、自定义块、自定义模型，都是通过继承Module类完成的**，这一点很重要。其实Sequential类也是继承自Module类的。
@@ -300,4 +306,3 @@ def named_modules(self, memo=None, prefix=''):
 （4）model的modules()方法和named_modules()方法都会将整个模型的所有构成（包括包装层、单独的层、自定义层等）由浅入深依次遍历出来，只不过modules()返回的每一个元素是直接返回的层对象本身，而named_modules()返回的每一个元素是一个元组，第一个元素是名称，第二个元素才是层对象本身。
 
 （5）如何理解children和modules之间的这种差异性。注意pytorch里面不管是模型、层、激活函数、损失函数都可以当成是Module的拓展，所以modules和named_modules会层层迭代，由浅入深，将每一个自定义块block、然后block里面的每一个层都当成是module来迭代。而children就比较直观，就表示的是所谓的“孩子”，所以没有层层迭代深入。
-

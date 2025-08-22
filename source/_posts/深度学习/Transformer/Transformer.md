@@ -1,7 +1,14 @@
 ---
 title: Transformer
 date: '2024-06-17 13:59:33'
-updated: '2025-08-22 16:19:57'
+updated: '2025-08-22 20:35:18'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+  - Transformer
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 [Transformer学习资源&顺序推荐 - 有氧 - 博客园](https://www.cnblogs.com/youtmdyang/p/16172480.html)
 
@@ -919,4 +926,3 @@ print(output)
 + <font style="color:rgba(0, 0, 0, 0.75);">《Language Models are Unsupervised Multitask Learners》</font>
 + <font style="color:rgba(0, 0, 0, 0.75);">Attention in transformers, visually explained</font>
 + <font style="color:rgba(0, 0, 0, 0.75);">Transformer Neural Networks, ChatGPT’s foundation</font>
-
