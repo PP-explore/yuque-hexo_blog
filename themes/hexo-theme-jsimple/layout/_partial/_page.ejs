@@ -1,6 +1,8 @@
 <div class="page-title">
     <ul>
         <li><a href="/"><%= __('recent_posts') %></a></li>
+		<% console.log("Rendering comment partial..."); %>
+		<%- partial('_partial/comment') %>
         <%- partial('_widget/search-bar') %>
     </ul>
 </div>
