@@ -32,17 +32,17 @@ highlight_theme: atom-one
 ###     顶部菜单4: top4
 menu:
   JAVA: Java
-  计算机: ComputerScience
-  人工智能: AI 
-  随笔: SuiBi
+  计算机: Computer Science
+  人工智能: AI
+  技术杂文: Tech Miscellany
+  生活随笔: Life
 
 tag_map:
-  hexo: hexo
   生活: life
-  深度学习: DeepLearning
+  深度学习: Deep Learning
   JAVA: JAVA
   随笔: 随笔
-  计算机: ComputerScience
+  计算机: Computer Science
 
 # 最左侧常驻的导航菜单，一般指向 /about 即可
 left_nav_menus:
@@ -89,7 +89,7 @@ local_search:
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+  top_n_per_article: 2
   # unescape html strings to the readable one
   unescape: false
 
@@ -101,14 +101,13 @@ analytics:
 ## 网站评论，仅支持Disqus。需要别的自行修改源码
 comments:
   enable: false
+  shortname: pprnb
   configId: 12345
 
 ## 微软的clarity服务
 clarity:
   enable: false
   configId: 54321
-
-tags_layout: tags
 
 ## Google AdSense.
 adsense:

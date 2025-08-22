@@ -1,16 +1,16 @@
-# 语雀 + Hexo + GitHub Actions + Vercel 博客解决方案
+# 语雀 + Hexo + GitHub Actions + Vercel +主题 Jsimple 博客解决方案
 # 前言
 > 当前支持语雀 Token 模式（需要语雀超级会员）和账号密码模式（不需要任何会员）
 # 博客工具
 
 - 写作平台：语雀
 - 博客平台：[Hexo](https://hexo.io/)
-- 博客主题：[Next](https://github.com/next-theme/hexo-theme-next)
+- 博客主题：[JSimple](https://github.com/tangkunyin/hexo-theme-jsimple)
 - 博客文档同步：[Elog](https://github.com/LetTTGACO/elog)
 - 部署平台：Vercel
 
 # 博客搭建指南
-
+其他详细配置可以参考个人搭建文章: 
 
 ## Fork模板仓库
 
