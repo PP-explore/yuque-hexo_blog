@@ -4,6 +4,7 @@ Thumbs.db
 db.json
 *.log
 source/_posts/*
+source/_posts/**/*
 node_modules/
 public/
 .deploy*/
