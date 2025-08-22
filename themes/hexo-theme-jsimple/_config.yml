@@ -104,6 +104,7 @@ comments:
   shortname: pprnb
   configId: 12345
   count: true
+  layout: comment
 
 ## 微软的clarity服务
 clarity:

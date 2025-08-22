@@ -8,7 +8,7 @@ author: https://hello.tangkunyin.com
 authorDesc: 一个不断学习成长的技术新人 
 keywords:
 description:
-comments:
+comments: true
 photos:
 
 - img/2017/demo.jpg
