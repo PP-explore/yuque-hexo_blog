@@ -1073,11 +1073,11 @@
     {
       "id": 177789018,
       "doc_id": "rshsazizf33xn4pw",
-      "updated": 1755764550000,
+      "updated": 1755765259000,
       "properties": {
-        "title": "概念",
+        "title": "深度学习常见概念",
         "date": "2024-07-13 16:10:14",
-        "updated": "2025-08-21 16:22:30"
+        "updated": "2025-08-21 16:34:19"
       },
       "catalog": [
         {
@@ -1085,8 +1085,8 @@
           "doc_id": "rshsazizf33xn4pw"
         }
       ],
-      "realName": "概念",
-      "relativePath": "/深度学习/概念.md",
+      "realName": "深度学习常见概念",
+      "relativePath": "/深度学习/深度学习常见概念.md",
       "docPath": "source/_posts/深度学习"
     },
     {
@@ -1268,7 +1268,7 @@
     },
     {
       "type": "DOC",
-      "title": "概念",
+      "title": "深度学习常见概念",
       "uuid": "nCRpJUw9HppDS8yw",
       "url": "rshsazizf33xn4pw",
       "prev_uuid": "UOfm8DaJWBqa9EV0",
