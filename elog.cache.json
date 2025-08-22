@@ -516,11 +516,11 @@
     {
       "id": 231124924,
       "doc_id": "txhok00z2u3xlar3",
-      "updated": 1755853774000,
+      "updated": 1755856562000,
       "properties": {
         "title": "骨干模型",
         "date": "2025-08-05 17:34:31",
-        "updated": "2025-08-22 17:09:34"
+        "updated": "2025-08-22 17:56:02"
       },
       "catalog": [
         {
@@ -667,11 +667,11 @@
     {
       "id": 231124924,
       "doc_id": "txhok00z2u3xlar3",
-      "updated": 1755853774000,
+      "updated": 1755856562000,
       "properties": {
         "title": "骨干模型",
         "date": "2025-08-05 17:34:31",
-        "updated": "2025-08-22 17:09:34"
+        "updated": "2025-08-22 17:56:02"
       },
       "catalog": [
         {
@@ -692,8 +692,8 @@
         }
       ],
       "realName": "骨干模型",
-      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典\\骨干模型.md",
-      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典"
+      "relativePath": "/深度学习/Transformer/TubeDETR/模型/函数/权重字典/骨干模型.md",
+      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/模型/函数/权重字典"
     },
     {
       "id": 231134449,
@@ -1298,9 +1298,8 @@
         }
       ],
       "realName": "JavaSE",
-      "relativePath": "\\JAVA\\JavaSE.md",
-      "needUpdate": 1,
-      "docPath": "source\\_posts\\JAVA"
+      "relativePath": "/JAVA/JavaSE.md",
+      "docPath": "source/_posts/JAVA"
     }
   ],
   "catalog": [
