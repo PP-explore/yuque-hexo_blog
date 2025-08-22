@@ -1,8 +1,7 @@
 <div class="page-title">
     <ul>
         <li><a href="/"><%= __('recent_posts') %></a></li>
-		<% console.log("Rendering comment partial..."); %>
-		<%- partial('_partial/comments') %>
+
         <% if(page.categories && page.categories.first()){ %>
             <% for (var name in theme.menu){ %>
                 <li class="<%= (page.categories.first().name == name) ? 'active' : '' %>">
