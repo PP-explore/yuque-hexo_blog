@@ -96,9 +96,11 @@ local_search:
 ## 网站统计，仅支持Google。需要别的自行修改源码
 analytics:
   enable: false
-  shortname: tomax
+  shortname: ppblog
+  configId: G-544YZ94JEW
 
 ## 网站评论，仅支持Disqus。需要别的自行修改源码
+disqus_cors: true
 comments:
   enable: true
   shortname: pprnb
