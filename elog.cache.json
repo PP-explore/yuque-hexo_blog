@@ -360,7 +360,6 @@
       ],
       "realName": "Unix学习",
       "relativePath": "/计算机/Unix学习.md",
-      "needUpdate": 1,
       "docPath": "source/_posts/计算机"
     },
     {
@@ -455,11 +454,11 @@
     {
       "id": 231124924,
       "doc_id": "txhok00z2u3xlar3",
-      "updated": 1755850768000,
+      "updated": 1755853774000,
       "properties": {
         "title": "骨干模型",
         "date": "2025-08-05 17:34:31",
-        "updated": "2025-08-22 16:19:28"
+        "updated": "2025-08-22 17:09:34"
       },
       "catalog": [
         {
