@@ -1,18 +1,15 @@
 ---
 title: JAVA开发
 date: '2025-02-15 16:35:12'
-updated: '2025-08-22 20:36:16'
----
-```javascript
-categories: 
-  - JAVA              # 支持多级分类（数组格式）
+updated: '2025-08-22 20:49:15'
+categories:
+  - JAVA
 tags:
   - JAVA
   - 后端
-cover: /images/custom-cover.jpg  # 封面图绝对路径
-recommend: true       # 是否推荐
-```
-
+cover: /images/custom-cover.jpg
+recommend: true
+---
 ## JDK的组成
 + JVM（Java Virtual Machine)：Java虚拟机，真正运行]ava程序的地方。
 + 核心类库：Java自己写好的程序，给程序员自己的程序调用的。  
@@ -30,4 +27,3 @@ recommend: true       # 是否推荐
 <font style="color:rgb(77, 77, 77);">1、IntelliJ IDEA一般简称IDEA，是Java编程语言开发的集成环境，在业界被公认为最好的java开发工具。</font>
 
 <font style="color:rgb(77, 77, 77);">2、IDEA在代码错误提醒，智能代码补全等多方面表现的都非常优秀，是]ava开发企业级首选工具。</font>
-

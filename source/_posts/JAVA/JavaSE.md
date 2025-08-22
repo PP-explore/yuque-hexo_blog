@@ -1,18 +1,15 @@
 ---
 title: JavaSE
 date: '2025-02-15 15:26:54'
-updated: '2025-08-22 20:36:21'
----
-```javascript
-categories: 
-  - JAVA              # 支持多级分类（数组格式）
+updated: '2025-08-22 20:49:28'
+categories:
+  - JAVA
 tags:
   - JAVA
   - 后端
-cover: /images/custom-cover.jpg  # 封面图绝对路径
-recommend: true       # 是否推荐
-```
-
+cover: /images/custom-cover.jpg
+recommend: true
+---
 # <font style="background-color:rgba(255, 255, 255, 0);"> 语法</font>
 <font style="background-color:rgba(255, 255, 255, 0);">字面量：</font><font style="color:rgba(0, 0, 0, 0.7);background-color:rgba(255, 255, 255, 0);">字面量是直接出现在代码中的固定值，比如int a=42 等号右侧的部分</font>
 
@@ -3127,4 +3124,3 @@ public class StreamDemo10 {
 ![](/images/5f57ac8a5088d164c288df0513104ad1.png)
 
 ![](/images/fa82941f53b9996713244bdc96bc4ef2.png)![](/images/30df81c187f3128113e66d6ee83c7c13.png)
-

@@ -1,21 +1,15 @@
 ---
 title: Java Web
 date: '2025-03-17 16:46:30'
-updated: '2025-08-22 20:36:10'
----
-```javascript
-
-categories: 
-  - JAVA              # 支持多级分类（数组格式）
+updated: '2025-08-22 20:49:00'
+categories:
+  - JAVA
 tags:
   - JAVA
   - 后端
-cover: /images/custom-cover.jpg  # 封面图绝对路径
-recommend: true       # 是否推荐
-```
-
-
-
+cover: /images/custom-cover.jpg
+recommend: true
+---
 HTML基础结构：
 
 ```java
@@ -49,4 +43,3 @@ vscode插件：
 ![](/images/77824fb4558b76af1143fd5020849c1a.png)
 
 ![](/images/171505b4ce56e4d83b08c0f625500fd2.png)![](/images/927e12f830a5a45a80182ad4bdf72b03.png)
-
