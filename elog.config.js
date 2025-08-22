@@ -26,7 +26,7 @@ module.exports = {
       catalog: true,
       frontMatter: {
         enable: true,
-        include: ['categories', 'layout','tags','title', 'date', 'updated', 'recommend', 'comment','date', 'updated'],
+        include: ['categories', 'layout','tags','title', 'date', 'updated', 'recommend', 'comments','comment','date', 'updated'],
       },
       formatExt: './format.js',
     }
