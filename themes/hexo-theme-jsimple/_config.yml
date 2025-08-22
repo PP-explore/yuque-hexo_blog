@@ -95,7 +95,7 @@ local_search:
 
 ## 网站统计，仅支持Google。需要别的自行修改源码
 analytics:
-  enable: false
+  enable: true
   shortname: ppblog
   configId: G-544YZ94JEW
 
