@@ -22,84 +22,8 @@
       },
       "catalog": [],
       "realName": "测试修改标题",
-      "relativePath": "/测试修改标题.md",
-      "docPath": "source/_posts"
-    },
-    {
-      "id": 232300503,
-      "doc_id": "no0omupx3c7yplek",
-      "updated": 1755850894000,
-      "properties": {
-        "title": "博客构建",
-        "date": "2025-08-13 21:14:11",
-        "updated": "2025-08-22 16:21:34"
-      },
-      "catalog": [
-        {
-          "title": "技术杂文",
-          "doc_id": "no0omupx3c7yplek"
-        }
-      ],
-      "realName": "博客构建",
-      "relativePath": "/技术杂文/博客构建.md",
-      "docPath": "source/_posts/技术杂文"
-    },
-    {
-      "id": 229262740,
-      "doc_id": "mv7ey4va9klcd565",
-      "updated": 1755762728000,
-      "properties": {
-        "title": "黑马点评",
-        "date": "2025-07-23 17:11:05",
-        "updated": "2025-08-21 15:52:08"
-      },
-      "catalog": [
-        {
-          "title": "JAVA",
-          "doc_id": "mv7ey4va9klcd565"
-        }
-      ],
-      "realName": "黑马点评",
-      "relativePath": "/JAVA/黑马点评.md",
-      "docPath": "source/_posts/JAVA"
-    },
-    {
-      "id": 232300503,
-      "doc_id": "no0omupx3c7yplek",
-      "updated": 1755850894000,
-      "properties": {
-        "title": "博客构建",
-        "date": "2025-08-13 21:14:11",
-        "updated": "2025-08-22 16:21:34"
-      },
-      "catalog": [
-        {
-          "title": "技术杂文",
-          "doc_id": "no0omupx3c7yplek"
-        }
-      ],
-      "realName": "博客构建",
-      "relativePath": "/技术杂文/博客构建.md",
-      "docPath": "source/_posts/技术杂文"
-    },
-    {
-      "id": 229262740,
-      "doc_id": "mv7ey4va9klcd565",
-      "updated": 1755762728000,
-      "properties": {
-        "title": "黑马点评",
-        "date": "2025-07-23 17:11:05",
-        "updated": "2025-08-21 15:52:08"
-      },
-      "catalog": [
-        {
-          "title": "JAVA",
-          "doc_id": "mv7ey4va9klcd565"
-        }
-      ],
-      "realName": "黑马点评",
-      "relativePath": "/JAVA/黑马点评.md",
-      "docPath": "source/_posts/JAVA"
+      "relativePath": "\\测试修改标题.md",
+      "docPath": "source\\_posts"
     },
     {
       "id": 210947350,
@@ -117,141 +41,36 @@
         }
       ],
       "realName": "Java Web",
-      "relativePath": "/JAVA/Java Web.md",
-      "docPath": "source/_posts/JAVA"
+      "relativePath": "\\JAVA\\Java Web.md",
+      "docPath": "source\\_posts\\JAVA"
     },
     {
-      "id": 227166357,
-      "doc_id": "dqf2etsi7rpsfb1d",
-      "updated": 1755851061000,
+      "id": 177789018,
+      "doc_id": "rshsazizf33xn4pw",
+      "updated": 1755851106000,
       "properties": {
-        "title": "苍穹外卖",
-        "date": "2025-07-08 20:46:55",
-        "updated": "2025-08-22 16:24:21"
+        "title": "深度学习常见概念",
+        "date": "2024-07-13 16:10:14",
+        "updated": "2025-08-22 16:25:06",
+        "categories": [
+          "人工智能",
+          "技术杂文"
+        ],
+        "tags": [
+          "深度学习"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
-          "title": "JAVA",
-          "doc_id": "dqf2etsi7rpsfb1d"
+          "title": "深度学习",
+          "doc_id": "rshsazizf33xn4pw"
         }
       ],
-      "realName": "苍穹外卖",
-      "relativePath": "/JAVA/苍穹外卖.md",
-      "docPath": "source/_posts/JAVA"
-    },
-    {
-      "id": 206019455,
-      "doc_id": "qin50r2dolwauzy1",
-      "updated": 1755762754000,
-      "properties": {
-        "title": "JAVA开发",
-        "date": "2025-02-15 16:35:12",
-        "updated": "2025-08-21 15:52:34"
-      },
-      "catalog": [
-        {
-          "title": "JAVA",
-          "doc_id": "qin50r2dolwauzy1"
-        }
-      ],
-      "realName": "JAVA开发",
-      "relativePath": "/JAVA/JAVA开发.md",
-      "docPath": "source/_posts/JAVA"
-    },
-    {
-      "id": 206009877,
-      "doc_id": "sqyz39zbvp54gvgz",
-      "updated": 1755762767000,
-      "properties": {
-        "title": "JavaSE",
-        "date": "2025-02-15 15:26:54",
-        "updated": "2025-08-21 15:52:47"
-      },
-      "catalog": [
-        {
-          "title": "JAVA",
-          "doc_id": "sqyz39zbvp54gvgz"
-        }
-      ],
-      "realName": "JavaSE",
-      "relativePath": "/JAVA/JavaSE.md",
-      "docPath": "source/_posts/JAVA"
-    },
-    {
-      "id": 107741300,
-      "doc_id": "ui9z5kiy6gegco0k",
-      "updated": 1755850982000,
-      "properties": {
-        "title": "数据结构",
-        "date": "2022-11-29 15:35:05",
-        "updated": "2025-08-22 16:23:02"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "ui9z5kiy6gegco0k"
-        }
-      ],
-      "realName": "数据结构",
-      "relativePath": "/计算机/数据结构.md",
-      "docPath": "source/_posts/计算机"
-    },
-    {
-      "id": 162088360,
-      "doc_id": "ylnhqapcv2zgb92e",
-      "updated": 1755851018000,
-      "properties": {
-        "title": "计算机网络",
-        "date": "2024-03-16 20:55:38",
-        "updated": "2025-08-22 16:23:38"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "ylnhqapcv2zgb92e"
-        }
-      ],
-      "realName": "计算机网络",
-      "relativePath": "/计算机/计算机网络.md",
-      "docPath": "source/_posts/计算机"
-    },
-    {
-      "id": 132348181,
-      "doc_id": "qflbxwtuwxtyafl2",
-      "updated": 1755851000000,
-      "properties": {
-        "title": "编码 --隐匿在计算机软硬件背后的语言",
-        "date": "2023-07-05 23:23:17",
-        "updated": "2025-08-22 16:23:20"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "qflbxwtuwxtyafl2"
-        }
-      ],
-      "realName": "编码 --隐匿在计算机软硬件背后的语言",
-      "relativePath": "/计算机/编码 --隐匿在计算机软硬件背后的语言.md",
-      "docPath": "source/_posts/计算机"
-    },
-    {
-      "id": 162226372,
-      "doc_id": "ywff1gbs37xmgbk5",
-      "updated": 1755851014000,
-      "properties": {
-        "title": "数据库原理",
-        "date": "2024-03-18 12:59:02",
-        "updated": "2025-08-22 16:23:34"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "ywff1gbs37xmgbk5"
-        }
-      ],
-      "realName": "数据库原理",
-      "relativePath": "/计算机/数据库原理.md",
-      "docPath": "source/_posts/计算机"
+      "realName": "深度学习常见概念",
+      "relativePath": "\\深度学习\\深度学习常见概念.md",
+      "docPath": "source\\_posts\\深度学习"
     },
     {
       "id": 108050578,
@@ -269,33 +88,274 @@
         }
       ],
       "realName": "计算机系统",
-      "relativePath": "/计算机/计算机系统.md",
-      "docPath": "source/_posts/计算机"
+      "relativePath": "\\计算机\\计算机系统.md",
+      "docPath": "source\\_posts\\计算机"
     },
     {
-      "id": 232707341,
-      "doc_id": "uochp1gysrcde1mk",
-      "updated": 1755851096000,
+      "id": 162088360,
+      "doc_id": "ylnhqapcv2zgb92e",
+      "updated": 1755851018000,
       "properties": {
-        "title": "测试修改标题",
-        "date": "2025-08-16 22:29:15",
-        "updated": "2025-08-22 16:24:56",
-        "categories": [
-          "JAVA",
-          "高级特性"
-        ],
-        "tags": [
-          "随笔",
-          "技术文档",
-          "配置指南"
-        ],
-        "cover": "/images/custom-cover.jpg",
-        "recommend": true
+        "title": "计算机网络",
+        "date": "2024-03-16 20:55:38",
+        "updated": "2025-08-22 16:23:38"
       },
-      "catalog": [],
-      "realName": "测试修改标题",
-      "relativePath": "/测试修改标题.md",
-      "docPath": "source/_posts"
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "ylnhqapcv2zgb92e"
+        }
+      ],
+      "realName": "计算机网络",
+      "relativePath": "\\计算机\\计算机网络.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 162226372,
+      "doc_id": "ywff1gbs37xmgbk5",
+      "updated": 1755851014000,
+      "properties": {
+        "title": "数据库原理",
+        "date": "2024-03-18 12:59:02",
+        "updated": "2025-08-22 16:23:34"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "ywff1gbs37xmgbk5"
+        }
+      ],
+      "realName": "数据库原理",
+      "relativePath": "\\计算机\\数据库原理.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 227166357,
+      "doc_id": "dqf2etsi7rpsfb1d",
+      "updated": 1755851061000,
+      "properties": {
+        "title": "苍穹外卖",
+        "date": "2025-07-08 20:46:55",
+        "updated": "2025-08-22 16:24:21"
+      },
+      "catalog": [
+        {
+          "title": "JAVA",
+          "doc_id": "dqf2etsi7rpsfb1d"
+        }
+      ],
+      "realName": "苍穹外卖",
+      "relativePath": "\\JAVA\\苍穹外卖.md",
+      "docPath": "source\\_posts\\JAVA"
+    },
+    {
+      "id": 132348181,
+      "doc_id": "qflbxwtuwxtyafl2",
+      "updated": 1755851000000,
+      "properties": {
+        "title": "编码 --隐匿在计算机软硬件背后的语言",
+        "date": "2023-07-05 23:23:17",
+        "updated": "2025-08-22 16:23:20"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "qflbxwtuwxtyafl2"
+        }
+      ],
+      "realName": "编码 --隐匿在计算机软硬件背后的语言",
+      "relativePath": "\\计算机\\编码 --隐匿在计算机软硬件背后的语言.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 162394082,
+      "doc_id": "qngklcr492ozic2h",
+      "updated": 1755850975000,
+      "properties": {
+        "title": "复试题",
+        "date": "2024-03-19 15:18:22",
+        "updated": "2025-08-22 16:22:55"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "qngklcr492ozic2h"
+        }
+      ],
+      "realName": "复试题",
+      "relativePath": "\\计算机\\复试题.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 160804081,
+      "doc_id": "xmh3dearzcipf6z2",
+      "updated": 1755850961000,
+      "properties": {
+        "title": "C语言学习",
+        "date": "2024-03-06 15:26:33",
+        "updated": "2025-08-22 16:22:41"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "xmh3dearzcipf6z2"
+        }
+      ],
+      "realName": "C语言学习",
+      "relativePath": "\\计算机\\C语言学习.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 107741300,
+      "doc_id": "ui9z5kiy6gegco0k",
+      "updated": 1755850982000,
+      "properties": {
+        "title": "数据结构",
+        "date": "2022-11-29 15:35:05",
+        "updated": "2025-08-22 16:23:02"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "ui9z5kiy6gegco0k"
+        }
+      ],
+      "realName": "数据结构",
+      "relativePath": "\\计算机\\数据结构.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 120360814,
+      "doc_id": "nqq5b0pnv0z2g36s",
+      "updated": 1755850948000,
+      "properties": {
+        "title": "Python",
+        "date": "2023-04-02 14:00:00",
+        "updated": "2025-08-22 16:22:28"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "nqq5b0pnv0z2g36s"
+        }
+      ],
+      "realName": "Python",
+      "relativePath": "\\计算机\\Python.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 232300503,
+      "doc_id": "no0omupx3c7yplek",
+      "updated": 1755850894000,
+      "properties": {
+        "title": "博客构建",
+        "date": "2025-08-13 21:14:11",
+        "updated": "2025-08-22 16:21:34"
+      },
+      "catalog": [
+        {
+          "title": "技术杂文",
+          "doc_id": "no0omupx3c7yplek"
+        }
+      ],
+      "realName": "博客构建",
+      "relativePath": "\\技术杂文\\博客构建.md",
+      "docPath": "source\\_posts\\技术杂文"
+    },
+    {
+      "id": 233375098,
+      "doc_id": "tv3dgoi8z3okxsps",
+      "updated": 1755850929000,
+      "properties": {
+        "title": "Unix学习",
+        "date": "2025-08-21 16:27:02",
+        "updated": "2025-08-22 16:22:09"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "tv3dgoi8z3okxsps"
+        }
+      ],
+      "realName": "Unix学习",
+      "relativePath": "\\计算机\\Unix学习.md",
+      "docPath": "source\\_posts\\计算机"
+    },
+    {
+      "id": 119015303,
+      "doc_id": "faebs2whcnymgml0",
+      "updated": 1755850886000,
+      "properties": {
+        "title": "Python爬虫",
+        "date": "2023-03-22 10:28:44",
+        "updated": "2025-08-22 16:21:26"
+      },
+      "catalog": [
+        {
+          "title": "技术杂文",
+          "doc_id": "faebs2whcnymgml0"
+        }
+      ],
+      "realName": "Python爬虫",
+      "relativePath": "\\技术杂文\\Python爬虫.md",
+      "docPath": "source\\_posts\\技术杂文"
+    },
+    {
+      "id": 109493950,
+      "doc_id": "mrqg9pnglsisnghg",
+      "updated": 1755850880000,
+      "properties": {
+        "title": "坦克大战2D",
+        "date": "2022-12-15 19:40:39",
+        "updated": "2025-08-22 16:21:20"
+      },
+      "catalog": [
+        {
+          "title": "技术杂文",
+          "doc_id": "mrqg9pnglsisnghg"
+        }
+      ],
+      "realName": "坦克大战2D",
+      "relativePath": "\\技术杂文\\坦克大战2D.md",
+      "docPath": "source\\_posts\\技术杂文"
+    },
+    {
+      "id": 198863581,
+      "doc_id": "rx17rerzlkzyvm4g",
+      "updated": 1755850857000,
+      "properties": {
+        "title": "Docker",
+        "date": "2024-12-16 19:53:33",
+        "updated": "2025-08-22 16:20:57"
+      },
+      "catalog": [
+        {
+          "title": "技术杂文",
+          "doc_id": "rx17rerzlkzyvm4g"
+        }
+      ],
+      "realName": "Docker",
+      "relativePath": "\\技术杂文\\Docker.md",
+      "docPath": "source\\_posts\\技术杂文"
+    },
+    {
+      "id": 108982484,
+      "doc_id": "cylsnxb4bynyb1kp",
+      "updated": 1755850871000,
+      "properties": {
+        "title": "类雷电卷轴设计",
+        "date": "2022-12-10 14:43:53",
+        "updated": "2025-08-22 16:21:11"
+      },
+      "catalog": [
+        {
+          "title": "技术杂文",
+          "doc_id": "cylsnxb4bynyb1kp"
+        }
+      ],
+      "realName": "类雷电卷轴设计",
+      "relativePath": "\\技术杂文\\类雷电卷轴设计.md",
+      "docPath": "source\\_posts\\技术杂文"
     },
     {
       "id": 201058611,
@@ -321,194 +381,72 @@
         }
       ],
       "realName": "知乎Transformer文章阅读记录",
-      "relativePath": "/深度学习/Transformer/Transformer/知乎Transformer文章阅读记录.md",
-      "docPath": "source/_posts/深度学习/Transformer/Transformer"
+      "relativePath": "\\深度学习\\Transformer\\Transformer\\知乎Transformer文章阅读记录.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\Transformer"
     },
     {
-      "id": 174078536,
-      "doc_id": "gialvwvo14v9vtka",
-      "updated": 1755850635000,
+      "id": 214082961,
+      "doc_id": "kg7zci401gwaq6z5",
+      "updated": 1755850825000,
       "properties": {
-        "title": "ResNet",
-        "date": "2024-06-17 20:40:59",
-        "updated": "2025-08-22 16:17:15"
+        "title": "扩散模型",
+        "date": "2025-04-06 20:25:00",
+        "updated": "2025-08-22 16:20:25"
+      },
+      "catalog": [],
+      "realName": "扩散模型",
+      "relativePath": "\\扩散模型.md",
+      "docPath": "source\\_posts"
+    },
+    {
+      "id": 174017224,
+      "doc_id": "ukhrtd24dwlpm5rh",
+      "updated": 1755850797000,
+      "properties": {
+        "title": "Transformer",
+        "date": "2024-06-17 13:59:33",
+        "updated": "2025-08-22 16:19:57"
       },
       "catalog": [
         {
           "title": "深度学习",
-          "doc_id": "gialvwvo14v9vtka"
-        }
-      ],
-      "realName": "ResNet",
-      "relativePath": "/深度学习/ResNet.md",
-      "docPath": "source/_posts/深度学习"
-    },
-    {
-      "id": 233375098,
-      "doc_id": "tv3dgoi8z3okxsps",
-      "updated": 1755850929000,
-      "properties": {
-        "title": "Unix学习",
-        "date": "2025-08-21 16:27:02",
-        "updated": "2025-08-22 16:22:09"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "tv3dgoi8z3okxsps"
-        }
-      ],
-      "realName": "Unix学习",
-      "relativePath": "/计算机/Unix学习.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/计算机"
-    },
-    {
-      "id": 231534337,
-      "doc_id": "antdhaova7ebki9k",
-      "updated": 1755850755000,
-      "properties": {
-        "title": "模型TubeDETR",
-        "date": "2025-08-08 11:04:59",
-        "updated": "2025-08-22 16:19:15"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "antdhaova7ebki9k"
+          "doc_id": "ukhrtd24dwlpm5rh"
         },
         {
           "title": "Transformer",
-          "doc_id": "antdhaova7ebki9k"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "antdhaova7ebki9k"
-        },
-        {
-          "title": "模型/函数/权重字典",
-          "doc_id": "antdhaova7ebki9k"
+          "doc_id": "ukhrtd24dwlpm5rh"
         }
       ],
-      "realName": "模型TubeDETR",
-      "relativePath": "/深度学习/Transformer/TubeDETR/模型/函数/权重字典/模型TubeDETR.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/模型/函数/权重字典"
+      "realName": "Transformer",
+      "relativePath": "\\深度学习\\Transformer\\Transformer.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer"
     },
     {
-      "id": 231284224,
-      "doc_id": "vwzmggcb7vhwpd2r",
-      "updated": 1755850743000,
+      "id": 231078065,
+      "doc_id": "nmf6zgypf6dg34sp",
+      "updated": 1755850783000,
       "properties": {
-        "title": "DataLoader数据集加载和迭代",
-        "date": "2025-08-06 17:12:44",
-        "updated": "2025-08-22 16:19:03"
+        "title": "数据集读取及处理",
+        "date": "2025-08-05 14:28:04",
+        "updated": "2025-08-22 16:19:43"
       },
       "catalog": [
         {
           "title": "深度学习",
-          "doc_id": "vwzmggcb7vhwpd2r"
+          "doc_id": "nmf6zgypf6dg34sp"
         },
         {
           "title": "Transformer",
-          "doc_id": "vwzmggcb7vhwpd2r"
+          "doc_id": "nmf6zgypf6dg34sp"
         },
         {
           "title": "TubeDETR",
-          "doc_id": "vwzmggcb7vhwpd2r"
-        },
-        {
-          "title": "Engine",
-          "doc_id": "vwzmggcb7vhwpd2r"
+          "doc_id": "nmf6zgypf6dg34sp"
         }
       ],
-      "realName": "DataLoader数据集加载和迭代",
-      "relativePath": "/深度学习/Transformer/TubeDETR/Engine/DataLoader数据集加载和迭代.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/Engine"
-    },
-    {
-      "id": 231278377,
-      "doc_id": "icf5eyu79lz3a1b3",
-      "updated": 1755850735000,
-      "properties": {
-        "title": "Engine",
-        "date": "2025-08-06 16:42:10",
-        "updated": "2025-08-22 16:18:55"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "icf5eyu79lz3a1b3"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "icf5eyu79lz3a1b3"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "icf5eyu79lz3a1b3"
-        }
-      ],
-      "realName": "Engine",
-      "relativePath": "/深度学习/Transformer/TubeDETR/Engine.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
-    },
-    {
-      "id": 231124924,
-      "doc_id": "txhok00z2u3xlar3",
-      "updated": 1755850768000,
-      "properties": {
-        "title": "骨干模型",
-        "date": "2025-08-05 17:34:31",
-        "updated": "2025-08-22 16:19:28"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "txhok00z2u3xlar3"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "txhok00z2u3xlar3"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "txhok00z2u3xlar3"
-        },
-        {
-          "title": "模型/函数/权重字典",
-          "doc_id": "txhok00z2u3xlar3"
-        }
-      ],
-      "realName": "骨干模型",
-      "relativePath": "/深度学习/Transformer/TubeDETR/模型/函数/权重字典/骨干模型.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/模型/函数/权重字典"
-    },
-    {
-      "id": 231279112,
-      "doc_id": "rlxt1rl4yxn3tg8d",
-      "updated": 1755850712000,
-      "properties": {
-        "title": "Util",
-        "date": "2025-08-06 16:46:24",
-        "updated": "2025-08-22 16:18:32"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "rlxt1rl4yxn3tg8d"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "rlxt1rl4yxn3tg8d"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "rlxt1rl4yxn3tg8d"
-        }
-      ],
-      "realName": "Util",
-      "relativePath": "/深度学习/Transformer/TubeDETR/Util.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
+      "realName": "数据集读取及处理",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\数据集读取及处理.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR"
     },
     {
       "id": 231268547,
@@ -538,112 +476,8 @@
         }
       ],
       "realName": "损失函数",
-      "relativePath": "/深度学习/Transformer/TubeDETR/模型/函数/权重字典/损失函数.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/模型/函数/权重字典"
-    },
-    {
-      "id": 231134449,
-      "doc_id": "sr2p21ngl9hbd0g0",
-      "updated": 1755850751000,
-      "properties": {
-        "title": "模型/函数/权重字典",
-        "date": "2025-08-05 18:00:11",
-        "updated": "2025-08-22 16:19:11"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "sr2p21ngl9hbd0g0"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "sr2p21ngl9hbd0g0"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "sr2p21ngl9hbd0g0"
-        }
-      ],
-      "realName": "模型!函数!权重字典",
-      "relativePath": "/深度学习/Transformer/TubeDETR/模型!函数!权重字典.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
-    },
-    {
-      "id": 231123330,
-      "doc_id": "raxphczy5g4dndob",
-      "updated": 1755850728000,
-      "properties": {
-        "title": "main处理",
-        "date": "2025-08-05 17:27:58",
-        "updated": "2025-08-22 16:18:48"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "raxphczy5g4dndob"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "raxphczy5g4dndob"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "raxphczy5g4dndob"
-        }
-      ],
-      "realName": "main处理",
-      "relativePath": "/深度学习/Transformer/TubeDETR/main处理.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
-    },
-    {
-      "id": 228867523,
-      "doc_id": "zezw7b4qcrr4r51q",
-      "updated": 1755850686000,
-      "properties": {
-        "title": "TubeDETR",
-        "date": "2025-07-21 10:33:38",
-        "updated": "2025-08-22 16:18:06"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "zezw7b4qcrr4r51q"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "zezw7b4qcrr4r51q"
-        }
-      ],
-      "realName": "TubeDETR",
-      "relativePath": "/深度学习/Transformer/TubeDETR.md",
-      "docPath": "source/_posts/深度学习/Transformer"
-    },
-    {
-      "id": 231078065,
-      "doc_id": "nmf6zgypf6dg34sp",
-      "updated": 1755850783000,
-      "properties": {
-        "title": "数据集读取及处理",
-        "date": "2025-08-05 14:28:04",
-        "updated": "2025-08-22 16:19:43"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "nmf6zgypf6dg34sp"
-        },
-        {
-          "title": "Transformer",
-          "doc_id": "nmf6zgypf6dg34sp"
-        },
-        {
-          "title": "TubeDETR",
-          "doc_id": "nmf6zgypf6dg34sp"
-        }
-      ],
-      "realName": "数据集读取及处理",
-      "relativePath": "/深度学习/Transformer/TubeDETR/数据集读取及处理.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典\\损失函数.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典"
     },
     {
       "id": 231127870,
@@ -673,45 +507,251 @@
         }
       ],
       "realName": "Transformer",
-      "relativePath": "/深度学习/Transformer/TubeDETR/模型/函数/权重字典/Transformer.md",
-      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/模型/函数/权重字典"
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典\\Transformer.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典"
     },
     {
-      "id": 174017224,
-      "doc_id": "ukhrtd24dwlpm5rh",
-      "updated": 1755850797000,
+      "id": 231534337,
+      "doc_id": "antdhaova7ebki9k",
+      "updated": 1755850755000,
       "properties": {
-        "title": "Transformer",
-        "date": "2024-06-17 13:59:33",
-        "updated": "2025-08-22 16:19:57"
+        "title": "模型TubeDETR",
+        "date": "2025-08-08 11:04:59",
+        "updated": "2025-08-22 16:19:15"
       },
       "catalog": [
         {
           "title": "深度学习",
-          "doc_id": "ukhrtd24dwlpm5rh"
+          "doc_id": "antdhaova7ebki9k"
         },
         {
           "title": "Transformer",
-          "doc_id": "ukhrtd24dwlpm5rh"
+          "doc_id": "antdhaova7ebki9k"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "antdhaova7ebki9k"
+        },
+        {
+          "title": "模型/函数/权重字典",
+          "doc_id": "antdhaova7ebki9k"
         }
       ],
-      "realName": "Transformer",
-      "relativePath": "/深度学习/Transformer/Transformer.md",
-      "docPath": "source/_posts/深度学习/Transformer"
+      "realName": "模型TubeDETR",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典\\模型TubeDETR.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典"
     },
     {
-      "id": 214082961,
-      "doc_id": "kg7zci401gwaq6z5",
-      "updated": 1755850825000,
+      "id": 231124924,
+      "doc_id": "txhok00z2u3xlar3",
+      "updated": 1755853774000,
       "properties": {
-        "title": "扩散模型",
-        "date": "2025-04-06 20:25:00",
-        "updated": "2025-08-22 16:20:25"
+        "title": "骨干模型",
+        "date": "2025-08-05 17:34:31",
+        "updated": "2025-08-22 17:09:34"
       },
-      "catalog": [],
-      "realName": "扩散模型",
-      "relativePath": "/扩散模型.md",
-      "docPath": "source/_posts"
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "txhok00z2u3xlar3"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "txhok00z2u3xlar3"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "txhok00z2u3xlar3"
+        },
+        {
+          "title": "模型/函数/权重字典",
+          "doc_id": "txhok00z2u3xlar3"
+        }
+      ],
+      "realName": "骨干模型",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典\\骨干模型.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR\\模型\\函数\\权重字典"
+    },
+    {
+      "id": 231134449,
+      "doc_id": "sr2p21ngl9hbd0g0",
+      "updated": 1755850751000,
+      "properties": {
+        "title": "模型/函数/权重字典",
+        "date": "2025-08-05 18:00:11",
+        "updated": "2025-08-22 16:19:11"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "sr2p21ngl9hbd0g0"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "sr2p21ngl9hbd0g0"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "sr2p21ngl9hbd0g0"
+        }
+      ],
+      "realName": "模型!函数!权重字典",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\模型!函数!权重字典.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR"
+    },
+    {
+      "id": 231278377,
+      "doc_id": "icf5eyu79lz3a1b3",
+      "updated": 1755850735000,
+      "properties": {
+        "title": "Engine",
+        "date": "2025-08-06 16:42:10",
+        "updated": "2025-08-22 16:18:55"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "icf5eyu79lz3a1b3"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "icf5eyu79lz3a1b3"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "icf5eyu79lz3a1b3"
+        }
+      ],
+      "realName": "Engine",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\Engine.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR"
+    },
+    {
+      "id": 231284224,
+      "doc_id": "vwzmggcb7vhwpd2r",
+      "updated": 1755850743000,
+      "properties": {
+        "title": "DataLoader数据集加载和迭代",
+        "date": "2025-08-06 17:12:44",
+        "updated": "2025-08-22 16:19:03"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "vwzmggcb7vhwpd2r"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "vwzmggcb7vhwpd2r"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "vwzmggcb7vhwpd2r"
+        },
+        {
+          "title": "Engine",
+          "doc_id": "vwzmggcb7vhwpd2r"
+        }
+      ],
+      "realName": "DataLoader数据集加载和迭代",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\Engine\\DataLoader数据集加载和迭代.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR\\Engine"
+    },
+    {
+      "id": 231123330,
+      "doc_id": "raxphczy5g4dndob",
+      "updated": 1755850728000,
+      "properties": {
+        "title": "main处理",
+        "date": "2025-08-05 17:27:58",
+        "updated": "2025-08-22 16:18:48"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "raxphczy5g4dndob"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "raxphczy5g4dndob"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "raxphczy5g4dndob"
+        }
+      ],
+      "realName": "main处理",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\main处理.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR"
+    },
+    {
+      "id": 231279112,
+      "doc_id": "rlxt1rl4yxn3tg8d",
+      "updated": 1755850712000,
+      "properties": {
+        "title": "Util",
+        "date": "2025-08-06 16:46:24",
+        "updated": "2025-08-22 16:18:32"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "rlxt1rl4yxn3tg8d"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "rlxt1rl4yxn3tg8d"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "rlxt1rl4yxn3tg8d"
+        }
+      ],
+      "realName": "Util",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\Util.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR"
+    },
+    {
+      "id": 174078536,
+      "doc_id": "gialvwvo14v9vtka",
+      "updated": 1755850635000,
+      "properties": {
+        "title": "ResNet",
+        "date": "2024-06-17 20:40:59",
+        "updated": "2025-08-22 16:17:15"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "gialvwvo14v9vtka"
+        }
+      ],
+      "realName": "ResNet",
+      "relativePath": "\\深度学习\\ResNet.md",
+      "docPath": "source\\_posts\\深度学习"
+    },
+    {
+      "id": 228867523,
+      "doc_id": "zezw7b4qcrr4r51q",
+      "updated": 1755850686000,
+      "properties": {
+        "title": "TubeDETR",
+        "date": "2025-07-21 10:33:38",
+        "updated": "2025-08-22 16:18:06"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "zezw7b4qcrr4r51q"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "zezw7b4qcrr4r51q"
+        }
+      ],
+      "realName": "TubeDETR",
+      "relativePath": "\\深度学习\\Transformer\\TubeDETR.md",
+      "docPath": "source\\_posts\\深度学习\\Transformer"
     },
     {
       "id": 201207076,
@@ -729,8 +769,211 @@
         }
       ],
       "realName": "Pytorch  nn.Module",
-      "relativePath": "/深度学习/Pytorch  nn.Module.md",
-      "docPath": "source/_posts/深度学习"
+      "relativePath": "\\深度学习\\Pytorch  nn.Module.md",
+      "docPath": "source\\_posts\\深度学习"
+    },
+    {
+      "id": 177058296,
+      "doc_id": "ndkko23wg04v969z",
+      "updated": 1755850616000,
+      "properties": {
+        "title": "第五课  全连接神经网络中",
+        "date": "2024-07-08 17:59:51",
+        "updated": "2025-08-22 16:16:56"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "ndkko23wg04v969z"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "ndkko23wg04v969z"
+        }
+      ],
+      "realName": "第五课  全连接神经网络中",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第五课  全连接神经网络中.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 180434538,
+      "doc_id": "drxkzvg8rgwbvsax",
+      "updated": 1755850601000,
+      "properties": {
+        "title": "第九、十课 语义分割",
+        "date": "2024-08-01 15:01:16",
+        "updated": "2025-08-22 16:16:41"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "drxkzvg8rgwbvsax"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "drxkzvg8rgwbvsax"
+        }
+      ],
+      "realName": "第九、十课 语义分割",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第九、十课 语义分割.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 169813546,
+      "doc_id": "zl8cwmvg39eq46rv",
+      "updated": 1755850627000,
+      "properties": {
+        "title": "动手学深度",
+        "date": "2024-05-15 23:06:18",
+        "updated": "2025-08-22 16:17:07"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "zl8cwmvg39eq46rv"
+        }
+      ],
+      "realName": "动手学深度",
+      "relativePath": "\\深度学习\\动手学深度.md",
+      "docPath": "source\\_posts\\深度学习"
+    },
+    {
+      "id": 178185340,
+      "doc_id": "yv16rk7gncgwm5qy",
+      "updated": 1755850535000,
+      "properties": {
+        "title": "第八课",
+        "date": "2024-07-16 16:22:08",
+        "updated": "2025-08-22 16:15:35"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "yv16rk7gncgwm5qy"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "yv16rk7gncgwm5qy"
+        }
+      ],
+      "realName": "第八课",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第八课.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 177771176,
+      "doc_id": "ic3mv1z1gtc3wgf1",
+      "updated": 1755850531000,
+      "properties": {
+        "title": "第七讲 卷积&图像去噪",
+        "date": "2024-07-13 11:58:29",
+        "updated": "2025-08-22 16:15:31"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "ic3mv1z1gtc3wgf1"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "ic3mv1z1gtc3wgf1"
+        }
+      ],
+      "realName": "第七讲 卷积&图像去噪",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第七讲 卷积&图像去噪.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 177554646,
+      "doc_id": "rrop1600l5uxu83g",
+      "updated": 1755850527000,
+      "properties": {
+        "title": "第六课  全连接神经网络下",
+        "date": "2024-07-11 19:55:13",
+        "updated": "2025-08-22 16:15:27"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "rrop1600l5uxu83g"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "rrop1600l5uxu83g"
+        }
+      ],
+      "realName": "第六课  全连接神经网络下",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第六课  全连接神经网络下.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 176792012,
+      "doc_id": "oll3gxzv8se1gd6v",
+      "updated": 1755850519000,
+      "properties": {
+        "title": "第四课  全连接神经网络 上",
+        "date": "2024-07-06 14:58:22",
+        "updated": "2025-08-22 16:15:19"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "oll3gxzv8se1gd6v"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "oll3gxzv8se1gd6v"
+        }
+      ],
+      "realName": "第四课  全连接神经网络 上",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第四课  全连接神经网络 上.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 176133621,
+      "doc_id": "zt37s5786dndwy89",
+      "updated": 1755850499000,
+      "properties": {
+        "title": "第一课 前言",
+        "date": "2024-07-02 13:40:14",
+        "updated": "2025-08-22 16:14:59"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "zt37s5786dndwy89"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "zt37s5786dndwy89"
+        }
+      ],
+      "realName": "第一课 前言",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第一课 前言.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 176142733,
+      "doc_id": "eply3mep6atd9zag",
+      "updated": 1755850509000,
+      "properties": {
+        "title": "第二、三课 图像分类任务介绍&线性分类器",
+        "date": "2024-07-02 14:28:20",
+        "updated": "2025-08-22 16:15:09"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "eply3mep6atd9zag"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "eply3mep6atd9zag"
+        }
+      ],
+      "realName": "第二、三课 图像分类任务介绍&线性分类器",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\第二、三课 图像分类任务介绍&线性分类器.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
     },
     {
       "id": 200669279,
@@ -756,8 +999,8 @@
         }
       ],
       "realName": "GoogleNet",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析/GoogleNet.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析"
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析\\GoogleNet.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析"
     },
     {
       "id": 200664412,
@@ -783,27 +1026,50 @@
         }
       ],
       "realName": "VGG16",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析/VGG16.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析"
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析\\VGG16.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析"
     },
     {
-      "id": 120360814,
-      "doc_id": "nqq5b0pnv0z2g36s",
-      "updated": 1755850948000,
+      "id": 179563641,
+      "doc_id": "gmnu0avd5095txp4",
+      "updated": 1755850451000,
       "properties": {
-        "title": "Python",
-        "date": "2023-04-02 14:00:00",
-        "updated": "2025-08-22 16:22:28"
+        "title": "KNN",
+        "date": "2024-07-26 10:19:07",
+        "updated": "2025-08-22 16:14:11"
       },
       "catalog": [
         {
-          "title": "计算机",
-          "doc_id": "nqq5b0pnv0z2g36s"
+          "title": "深度学习",
+          "doc_id": "gmnu0avd5095txp4"
+        },
+        {
+          "title": "计算机视觉与深度学习 --北京邮电大学",
+          "doc_id": "gmnu0avd5095txp4"
         }
       ],
-      "realName": "Python",
-      "relativePath": "/计算机/Python.md",
-      "docPath": "source/_posts/计算机"
+      "realName": "KNN",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\KNN.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+    },
+    {
+      "id": 175470519,
+      "doc_id": "dwwdgfr8vidgh7r5",
+      "updated": 1755850424000,
+      "properties": {
+        "title": "计算机视觉与深度学习 --北京邮电大学",
+        "date": "2024-06-27 17:28:33",
+        "updated": "2025-08-22 16:13:44"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "dwwdgfr8vidgh7r5"
+        }
+      ],
+      "realName": "计算机视觉与深度学习 --北京邮电大学",
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学.md",
+      "docPath": "source\\_posts\\深度学习"
     },
     {
       "id": 200645901,
@@ -829,207 +1095,46 @@
         }
       ],
       "realName": "LeNet-5",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析/LeNet-5.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析"
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析\\LeNet-5.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析"
     },
     {
-      "id": 198863581,
-      "doc_id": "rx17rerzlkzyvm4g",
-      "updated": 1755850857000,
+      "id": 206019455,
+      "doc_id": "qin50r2dolwauzy1",
+      "updated": 1755762754000,
       "properties": {
-        "title": "Docker",
-        "date": "2024-12-16 19:53:33",
-        "updated": "2025-08-22 16:20:57"
+        "title": "JAVA开发",
+        "date": "2025-02-15 16:35:12",
+        "updated": "2025-08-21 15:52:34"
       },
       "catalog": [
         {
-          "title": "技术杂文",
-          "doc_id": "rx17rerzlkzyvm4g"
+          "title": "JAVA",
+          "doc_id": "qin50r2dolwauzy1"
         }
       ],
-      "realName": "Docker",
-      "relativePath": "/技术杂文/Docker.md",
-      "docPath": "source/_posts/技术杂文"
+      "realName": "JAVA开发",
+      "relativePath": "\\JAVA\\JAVA开发.md",
+      "docPath": "source\\_posts\\JAVA"
     },
     {
-      "id": 177058296,
-      "doc_id": "ndkko23wg04v969z",
-      "updated": 1755850616000,
+      "id": 229262740,
+      "doc_id": "mv7ey4va9klcd565",
+      "updated": 1755762728000,
       "properties": {
-        "title": "第五课  全连接神经网络中",
-        "date": "2024-07-08 17:59:51",
-        "updated": "2025-08-22 16:16:56"
+        "title": "黑马点评",
+        "date": "2025-07-23 17:11:05",
+        "updated": "2025-08-21 15:52:08"
       },
       "catalog": [
         {
-          "title": "深度学习",
-          "doc_id": "ndkko23wg04v969z"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "ndkko23wg04v969z"
+          "title": "JAVA",
+          "doc_id": "mv7ey4va9klcd565"
         }
       ],
-      "realName": "第五课  全连接神经网络中",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第五课  全连接神经网络中.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 178185340,
-      "doc_id": "yv16rk7gncgwm5qy",
-      "updated": 1755850535000,
-      "properties": {
-        "title": "第八课",
-        "date": "2024-07-16 16:22:08",
-        "updated": "2025-08-22 16:15:35"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "yv16rk7gncgwm5qy"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "yv16rk7gncgwm5qy"
-        }
-      ],
-      "realName": "第八课",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第八课.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 176133621,
-      "doc_id": "zt37s5786dndwy89",
-      "updated": 1755850499000,
-      "properties": {
-        "title": "第一课 前言",
-        "date": "2024-07-02 13:40:14",
-        "updated": "2025-08-22 16:14:59"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "zt37s5786dndwy89"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "zt37s5786dndwy89"
-        }
-      ],
-      "realName": "第一课 前言",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第一课 前言.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 169813546,
-      "doc_id": "zl8cwmvg39eq46rv",
-      "updated": 1755850627000,
-      "properties": {
-        "title": "动手学深度",
-        "date": "2024-05-15 23:06:18",
-        "updated": "2025-08-22 16:17:07"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "zl8cwmvg39eq46rv"
-        }
-      ],
-      "realName": "动手学深度",
-      "relativePath": "/深度学习/动手学深度.md",
-      "docPath": "source/_posts/深度学习"
-    },
-    {
-      "id": 176792012,
-      "doc_id": "oll3gxzv8se1gd6v",
-      "updated": 1755850519000,
-      "properties": {
-        "title": "第四课  全连接神经网络 上",
-        "date": "2024-07-06 14:58:22",
-        "updated": "2025-08-22 16:15:19"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "oll3gxzv8se1gd6v"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "oll3gxzv8se1gd6v"
-        }
-      ],
-      "realName": "第四课  全连接神经网络 上",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第四课  全连接神经网络 上.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 176142733,
-      "doc_id": "eply3mep6atd9zag",
-      "updated": 1755850509000,
-      "properties": {
-        "title": "第二、三课 图像分类任务介绍&线性分类器",
-        "date": "2024-07-02 14:28:20",
-        "updated": "2025-08-22 16:15:09"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "eply3mep6atd9zag"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "eply3mep6atd9zag"
-        }
-      ],
-      "realName": "第二、三课 图像分类任务介绍&线性分类器",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第二、三课 图像分类任务介绍&线性分类器.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 180434538,
-      "doc_id": "drxkzvg8rgwbvsax",
-      "updated": 1755850601000,
-      "properties": {
-        "title": "第九、十课 语义分割",
-        "date": "2024-08-01 15:01:16",
-        "updated": "2025-08-22 16:16:41"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "drxkzvg8rgwbvsax"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "drxkzvg8rgwbvsax"
-        }
-      ],
-      "realName": "第九、十课 语义分割",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第九、十课 语义分割.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 179563641,
-      "doc_id": "gmnu0avd5095txp4",
-      "updated": 1755850451000,
-      "properties": {
-        "title": "KNN",
-        "date": "2024-07-26 10:19:07",
-        "updated": "2025-08-22 16:14:11"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "gmnu0avd5095txp4"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "gmnu0avd5095txp4"
-        }
-      ],
-      "realName": "KNN",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/KNN.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
+      "realName": "黑马点评",
+      "relativePath": "\\JAVA\\黑马点评.md",
+      "docPath": "source\\_posts\\JAVA"
     },
     {
       "id": 179492895,
@@ -1046,201 +1151,33 @@
           "doc_id": "qi21d4dwsg29wf3y"
         },
         {
-          "title": "计算机视觉与深度学习 北京邮电大学",
+          "title": "计算机视觉与深度学习 --北京邮电大学",
           "doc_id": "qi21d4dwsg29wf3y"
         }
       ],
       "realName": "经典网络结构分析",
-      "relativePath": "/深度学习/计算机视觉与深度学习 北京邮电大学/经典网络结构分析.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 北京邮电大学"
+      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析.md",
+      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
     },
     {
-      "id": 177789018,
-      "doc_id": "rshsazizf33xn4pw",
-      "updated": 1755851106000,
+      "id": 206009877,
+      "doc_id": "sqyz39zbvp54gvgz",
+      "updated": 1755762767000,
       "properties": {
-        "title": "深度学习常见概念",
-        "date": "2024-07-13 16:10:14",
-        "updated": "2025-08-22 16:25:06",
-        "categories": [
-          "人工智能",
-          "技术杂文"
-        ],
-        "tags": [
-          "深度学习"
-        ],
-        "cover": "/images/custom-cover.jpg",
-        "recommend": true
+        "title": "JavaSE",
+        "date": "2025-02-15 15:26:54",
+        "updated": "2025-08-21 15:52:47"
       },
       "catalog": [
         {
-          "title": "深度学习",
-          "doc_id": "rshsazizf33xn4pw"
+          "title": "JAVA",
+          "doc_id": "sqyz39zbvp54gvgz"
         }
       ],
-      "realName": "深度学习常见概念",
-      "relativePath": "/深度学习/深度学习常见概念.md",
-      "docPath": "source/_posts/深度学习"
-    },
-    {
-      "id": 160804081,
-      "doc_id": "xmh3dearzcipf6z2",
-      "updated": 1755850961000,
-      "properties": {
-        "title": "C语言学习",
-        "date": "2024-03-06 15:26:33",
-        "updated": "2025-08-22 16:22:41"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "xmh3dearzcipf6z2"
-        }
-      ],
-      "realName": "C语言学习",
-      "relativePath": "/计算机/C语言学习.md",
-      "docPath": "source/_posts/计算机"
-    },
-    {
-      "id": 162394082,
-      "doc_id": "qngklcr492ozic2h",
-      "updated": 1755850975000,
-      "properties": {
-        "title": "复试题",
-        "date": "2024-03-19 15:18:22",
-        "updated": "2025-08-22 16:22:55"
-      },
-      "catalog": [
-        {
-          "title": "计算机",
-          "doc_id": "qngklcr492ozic2h"
-        }
-      ],
-      "realName": "复试题",
-      "relativePath": "/计算机/复试题.md",
-      "docPath": "source/_posts/计算机"
-    },
-    {
-      "id": 177554646,
-      "doc_id": "rrop1600l5uxu83g",
-      "updated": 1755850527000,
-      "properties": {
-        "title": "第六课  全连接神经网络下",
-        "date": "2024-07-11 19:55:13",
-        "updated": "2025-08-22 16:15:27"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "rrop1600l5uxu83g"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "rrop1600l5uxu83g"
-        }
-      ],
-      "realName": "第六课  全连接神经网络下",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第六课  全连接神经网络下.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 175470519,
-      "doc_id": "dwwdgfr8vidgh7r5",
-      "updated": 1755850424000,
-      "properties": {
-        "title": "计算机视觉与深度学习 --北京邮电大学",
-        "date": "2024-06-27 17:28:33",
-        "updated": "2025-08-22 16:13:44"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "dwwdgfr8vidgh7r5"
-        }
-      ],
-      "realName": "计算机视觉与深度学习 --北京邮电大学",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学.md",
-      "docPath": "source/_posts/深度学习"
-    },
-    {
-      "id": 177771176,
-      "doc_id": "ic3mv1z1gtc3wgf1",
-      "updated": 1755850531000,
-      "properties": {
-        "title": "第七讲 卷积&图像去噪",
-        "date": "2024-07-13 11:58:29",
-        "updated": "2025-08-22 16:15:31"
-      },
-      "catalog": [
-        {
-          "title": "深度学习",
-          "doc_id": "ic3mv1z1gtc3wgf1"
-        },
-        {
-          "title": "计算机视觉与深度学习 --北京邮电大学",
-          "doc_id": "ic3mv1z1gtc3wgf1"
-        }
-      ],
-      "realName": "第七讲 卷积&图像去噪",
-      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/第七讲 卷积&图像去噪.md",
-      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
-    },
-    {
-      "id": 119015303,
-      "doc_id": "faebs2whcnymgml0",
-      "updated": 1755850886000,
-      "properties": {
-        "title": "Python爬虫",
-        "date": "2023-03-22 10:28:44",
-        "updated": "2025-08-22 16:21:26"
-      },
-      "catalog": [
-        {
-          "title": "技术杂文",
-          "doc_id": "faebs2whcnymgml0"
-        }
-      ],
-      "realName": "Python爬虫",
-      "relativePath": "/技术杂文/Python爬虫.md",
-      "docPath": "source/_posts/技术杂文"
-    },
-    {
-      "id": 108982484,
-      "doc_id": "cylsnxb4bynyb1kp",
-      "updated": 1755850871000,
-      "properties": {
-        "title": "类雷电卷轴设计",
-        "date": "2022-12-10 14:43:53",
-        "updated": "2025-08-22 16:21:11"
-      },
-      "catalog": [
-        {
-          "title": "技术杂文",
-          "doc_id": "cylsnxb4bynyb1kp"
-        }
-      ],
-      "realName": "类雷电卷轴设计",
-      "relativePath": "/技术杂文/类雷电卷轴设计.md",
-      "docPath": "source/_posts/技术杂文"
-    },
-    {
-      "id": 109493950,
-      "doc_id": "mrqg9pnglsisnghg",
-      "updated": 1755850880000,
-      "properties": {
-        "title": "坦克大战2D",
-        "date": "2022-12-15 19:40:39",
-        "updated": "2025-08-22 16:21:20"
-      },
-      "catalog": [
-        {
-          "title": "技术杂文",
-          "doc_id": "mrqg9pnglsisnghg"
-        }
-      ],
-      "realName": "坦克大战2D",
-      "relativePath": "/技术杂文/坦克大战2D.md",
-      "docPath": "source/_posts/技术杂文"
+      "realName": "JavaSE",
+      "relativePath": "\\JAVA\\JavaSE.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\JAVA"
     }
   ],
   "catalog": [
