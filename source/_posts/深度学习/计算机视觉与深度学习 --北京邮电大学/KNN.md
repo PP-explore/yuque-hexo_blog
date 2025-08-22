@@ -1,7 +1,13 @@
 ---
 title: KNN
 date: '2024-07-26 10:19:07'
-updated: '2025-08-22 16:14:11'
+updated: '2025-08-22 18:00:01'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 代码流程：
 
@@ -82,10 +88,3 @@ Question2
 5. 旋转相同角度并且对空白元素填充相同空白值，不进行插值
 
 空白元素相同，相减为0不会产生影响，
-
-
-
-
-
-
-

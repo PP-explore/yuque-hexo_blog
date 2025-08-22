@@ -47,11 +47,11 @@
     {
       "id": 177789018,
       "doc_id": "rshsazizf33xn4pw",
-      "updated": 1755851106000,
+      "updated": 1755856797000,
       "properties": {
         "title": "深度学习常见概念",
         "date": "2024-07-13 16:10:14",
-        "updated": "2025-08-22 16:25:06",
+        "updated": "2025-08-22 17:59:57",
         "categories": [
           "人工智能",
           "技术杂文"
@@ -69,8 +69,8 @@
         }
       ],
       "realName": "深度学习常见概念",
-      "relativePath": "\\深度学习\\深度学习常见概念.md",
-      "docPath": "source\\_posts\\深度学习"
+      "relativePath": "/深度学习/深度学习常见概念.md",
+      "docPath": "source/_posts/深度学习"
     },
     {
       "id": 108050578,
@@ -322,11 +322,17 @@
     {
       "id": 198863581,
       "doc_id": "rx17rerzlkzyvm4g",
-      "updated": 1755850857000,
+      "updated": 1755856791000,
       "properties": {
         "title": "Docker",
         "date": "2024-12-16 19:53:33",
-        "updated": "2025-08-22 16:20:57"
+        "updated": "2025-08-22 17:59:51",
+        "categories": [
+          "技术杂文"
+        ],
+        "tags": null,
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
@@ -335,17 +341,23 @@
         }
       ],
       "realName": "Docker",
-      "relativePath": "\\技术杂文\\Docker.md",
-      "docPath": "source\\_posts\\技术杂文"
+      "relativePath": "/技术杂文/Docker.md",
+      "docPath": "source/_posts/技术杂文"
     },
     {
       "id": 108982484,
       "doc_id": "cylsnxb4bynyb1kp",
-      "updated": 1755850871000,
+      "updated": 1755856788000,
       "properties": {
         "title": "类雷电卷轴设计",
         "date": "2022-12-10 14:43:53",
-        "updated": "2025-08-22 16:21:11"
+        "updated": "2025-08-22 17:59:48",
+        "categories": [
+          "技术杂文"
+        ],
+        "tags": null,
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
@@ -354,8 +366,8 @@
         }
       ],
       "realName": "类雷电卷轴设计",
-      "relativePath": "\\技术杂文\\类雷电卷轴设计.md",
-      "docPath": "source\\_posts\\技术杂文"
+      "relativePath": "/技术杂文/类雷电卷轴设计.md",
+      "docPath": "source/_posts/技术杂文"
     },
     {
       "id": 201058611,
@@ -387,16 +399,24 @@
     {
       "id": 214082961,
       "doc_id": "kg7zci401gwaq6z5",
-      "updated": 1755850825000,
+      "updated": 1755856794000,
       "properties": {
         "title": "扩散模型",
         "date": "2025-04-06 20:25:00",
-        "updated": "2025-08-22 16:20:25"
+        "updated": "2025-08-22 17:59:54",
+        "categories": [
+          "人工智能"
+        ],
+        "tags": [
+          "深度学习"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [],
       "realName": "扩散模型",
-      "relativePath": "\\扩散模型.md",
-      "docPath": "source\\_posts"
+      "relativePath": "/扩散模型.md",
+      "docPath": "source/_posts"
     },
     {
       "id": 174017224,
@@ -516,11 +536,11 @@
     {
       "id": 231124924,
       "doc_id": "txhok00z2u3xlar3",
-      "updated": 1755856562000,
+      "updated": 1755856779000,
       "properties": {
         "title": "骨干模型",
         "date": "2025-08-05 17:34:31",
-        "updated": "2025-08-22 17:56:02"
+        "updated": "2025-08-22 17:59:39"
       },
       "catalog": [
         {
@@ -667,11 +687,11 @@
     {
       "id": 231124924,
       "doc_id": "txhok00z2u3xlar3",
-      "updated": 1755856562000,
+      "updated": 1755856779000,
       "properties": {
         "title": "骨干模型",
         "date": "2025-08-05 17:34:31",
-        "updated": "2025-08-22 17:56:02"
+        "updated": "2025-08-22 17:59:39"
       },
       "catalog": [
         {
@@ -1101,11 +1121,19 @@
     {
       "id": 200669279,
       "doc_id": "gk7vxohyf12sxgyp",
-      "updated": 1755850488000,
+      "updated": 1755856810000,
       "properties": {
         "title": "GoogleNet",
         "date": "2024-12-30 17:03:13",
-        "updated": "2025-08-22 16:14:48"
+        "updated": "2025-08-22 18:00:10",
+        "categories": [
+          "人工智能"
+        ],
+        "tags": [
+          "深度学习"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
@@ -1122,17 +1150,25 @@
         }
       ],
       "realName": "GoogleNet",
-      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析\\GoogleNet.md",
-      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析"
+      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析/GoogleNet.md",
+      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析"
     },
     {
       "id": 200664412,
       "doc_id": "ut8k7yt32ruf43ye",
-      "updated": 1755850481000,
+      "updated": 1755856807000,
       "properties": {
         "title": "VGG16",
         "date": "2024-12-30 16:38:43",
-        "updated": "2025-08-22 16:14:41"
+        "updated": "2025-08-22 18:00:07",
+        "categories": [
+          "人工智能"
+        ],
+        "tags": [
+          "深度学习"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
@@ -1149,17 +1185,25 @@
         }
       ],
       "realName": "VGG16",
-      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析\\VGG16.md",
-      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析"
+      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析/VGG16.md",
+      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析"
     },
     {
       "id": 179563641,
       "doc_id": "gmnu0avd5095txp4",
-      "updated": 1755850451000,
+      "updated": 1755856801000,
       "properties": {
         "title": "KNN",
         "date": "2024-07-26 10:19:07",
-        "updated": "2025-08-22 16:14:11"
+        "updated": "2025-08-22 18:00:01",
+        "categories": [
+          "人工智能"
+        ],
+        "tags": [
+          "深度学习"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
@@ -1172,17 +1216,17 @@
         }
       ],
       "realName": "KNN",
-      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\KNN.md",
-      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/KNN.md",
+      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
     },
     {
       "id": 175470519,
       "doc_id": "dwwdgfr8vidgh7r5",
-      "updated": 1755850424000,
+      "updated": 1755856799000,
       "properties": {
         "title": "计算机视觉与深度学习 --北京邮电大学",
         "date": "2024-06-27 17:28:33",
-        "updated": "2025-08-22 16:13:44"
+        "updated": "2025-08-22 17:59:59"
       },
       "catalog": [
         {
@@ -1191,17 +1235,25 @@
         }
       ],
       "realName": "计算机视觉与深度学习 --北京邮电大学",
-      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学.md",
-      "docPath": "source\\_posts\\深度学习"
+      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学.md",
+      "docPath": "source/_posts/深度学习"
     },
     {
       "id": 200645901,
       "doc_id": "akvgb1ayd36124d5",
-      "updated": 1755850470000,
+      "updated": 1755856805000,
       "properties": {
         "title": "LeNet-5",
         "date": "2024-12-30 15:09:40",
-        "updated": "2025-08-22 16:14:30"
+        "updated": "2025-08-22 18:00:05",
+        "categories": [
+          "人工智能"
+        ],
+        "tags": [
+          "深度学习"
+        ],
+        "cover": "/images/custom-cover.jpg",
+        "recommend": true
       },
       "catalog": [
         {
@@ -1218,8 +1270,8 @@
         }
       ],
       "realName": "LeNet-5",
-      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析\\LeNet-5.md",
-      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析"
+      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析/LeNet-5.md",
+      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析"
     },
     {
       "id": 206019455,
@@ -1262,11 +1314,11 @@
     {
       "id": 179492895,
       "doc_id": "qi21d4dwsg29wf3y",
-      "updated": 1755764318000,
+      "updated": 1755856802000,
       "properties": {
         "title": "经典网络结构分析",
         "date": "2024-07-25 19:02:46",
-        "updated": "2025-08-21 16:18:38"
+        "updated": "2025-08-22 18:00:02"
       },
       "catalog": [
         {
@@ -1279,8 +1331,8 @@
         }
       ],
       "realName": "经典网络结构分析",
-      "relativePath": "\\深度学习\\计算机视觉与深度学习 --北京邮电大学\\经典网络结构分析.md",
-      "docPath": "source\\_posts\\深度学习\\计算机视觉与深度学习 --北京邮电大学"
+      "relativePath": "/深度学习/计算机视觉与深度学习 --北京邮电大学/经典网络结构分析.md",
+      "docPath": "source/_posts/深度学习/计算机视觉与深度学习 --北京邮电大学"
     },
     {
       "id": 206009877,

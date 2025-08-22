@@ -1,7 +1,13 @@
 ---
 title: LeNet-5
 date: '2024-12-30 15:09:40'
-updated: '2025-08-22 16:14:30'
+updated: '2025-08-22 18:00:05'
+categories:
+  - 人工智能
+tags:
+  - 深度学习
+cover: /images/custom-cover.jpg
+recommend: true
 ---
 <font style="color:rgb(0, 0, 0);background-color:rgb(238, 240, 244);">LRN全称为Local Response Normalization，即局部响应归一化</font>  
 <font style="color:rgb(0, 0, 0);background-color:rgb(238, 240, 244);">LRN是一种深度学习中的一种归一化方法，由AlexNet卷积神经网络的原文提出并使用</font>
@@ -76,4 +82,3 @@ Dropout概率为0.5。
 ![](/images/5c248e32c3aeb726fc455c6b168bd5de.png)![](/images/261e997e20eaf9c5e64b42eaf1bc62cb.png)![](/images/1ef973c142967859af13a5af19630eb6.png)![](/images/537e3829282885773d380e69f34343cd.jpeg)
 
 MaxPooling没有可学习的参数![](/images/d99731866f9e7f2b26f383c44477b30f.png)![](/images/afa17b9bc5fb540a9f2a273d34986394.png)![](/images/4e937b705f982700cf0c70ed34214a07.png)
-
