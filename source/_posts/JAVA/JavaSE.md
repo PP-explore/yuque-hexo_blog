@@ -1,7 +1,7 @@
 ---
 title: JavaSE
 date: '2025-02-15 15:26:54'
-updated: '2025-08-04 22:17:19'
+updated: '2025-08-21 15:52:47'
 ---
 # <font style="background-color:rgba(255, 255, 255, 0);"> 语法</font>
 <font style="background-color:rgba(255, 255, 255, 0);">字面量：</font><font style="color:rgba(0, 0, 0, 0.7);background-color:rgba(255, 255, 255, 0);">字面量是直接出现在代码中的固定值，比如int a=42 等号右侧的部分</font>
