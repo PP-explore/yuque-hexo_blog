@@ -410,7 +410,45 @@
       "catalog": [
         {
           "title": "深度学习",
-          "doc_id": "ukhrtd24dwlpm5rh"
+          "doc_id": "gialvwvo14v9vtka"
+        }
+      ],
+      "realName": "ResNet",
+      "relativePath": "/深度学习/ResNet.md",
+      "docPath": "source/_posts/深度学习"
+    },
+    {
+      "id": 233375098,
+      "doc_id": "tv3dgoi8z3okxsps",
+      "updated": 1755850929000,
+      "properties": {
+        "title": "Unix学习",
+        "date": "2025-08-21 16:27:02",
+        "updated": "2025-08-22 16:22:09"
+      },
+      "catalog": [
+        {
+          "title": "计算机",
+          "doc_id": "tv3dgoi8z3okxsps"
+        }
+      ],
+      "realName": "Unix学习",
+      "relativePath": "/计算机/Unix学习.md",
+      "docPath": "source/_posts/计算机"
+    },
+    {
+      "id": 231534337,
+      "doc_id": "antdhaova7ebki9k",
+      "updated": 1755850755000,
+      "properties": {
+        "title": "模型TubeDETR",
+        "date": "2025-08-08 11:04:59",
+        "updated": "2025-08-22 16:19:15"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "antdhaova7ebki9k"
         },
         {
           "title": "Transformer",
@@ -444,9 +482,94 @@
           "doc_id": "nmf6zgypf6dg34sp"
         }
       ],
-      "realName": "数据集读取及处理",
-      "relativePath": "\\深度学习\\Transformer\\TubeDETR\\数据集读取及处理.md",
-      "docPath": "source\\_posts\\深度学习\\Transformer\\TubeDETR"
+      "realName": "DataLoader数据集加载和迭代",
+      "relativePath": "/深度学习/Transformer/TubeDETR/Engine/DataLoader数据集加载和迭代.md",
+      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/Engine"
+    },
+    {
+      "id": 231278377,
+      "doc_id": "icf5eyu79lz3a1b3",
+      "updated": 1755850735000,
+      "properties": {
+        "title": "Engine",
+        "date": "2025-08-06 16:42:10",
+        "updated": "2025-08-22 16:18:55"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "icf5eyu79lz3a1b3"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "icf5eyu79lz3a1b3"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "icf5eyu79lz3a1b3"
+        }
+      ],
+      "realName": "Engine",
+      "relativePath": "/深度学习/Transformer/TubeDETR/Engine.md",
+      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
+    },
+    {
+      "id": 231124924,
+      "doc_id": "txhok00z2u3xlar3",
+      "updated": 1755853774000,
+      "properties": {
+        "title": "骨干模型",
+        "date": "2025-08-05 17:34:31",
+        "updated": "2025-08-22 17:09:34"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "txhok00z2u3xlar3"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "txhok00z2u3xlar3"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "txhok00z2u3xlar3"
+        },
+        {
+          "title": "模型/函数/权重字典",
+          "doc_id": "txhok00z2u3xlar3"
+        }
+      ],
+      "realName": "骨干模型",
+      "relativePath": "/深度学习/Transformer/TubeDETR/模型/函数/权重字典/骨干模型.md",
+      "docPath": "source/_posts/深度学习/Transformer/TubeDETR/模型/函数/权重字典"
+    },
+    {
+      "id": 231279112,
+      "doc_id": "rlxt1rl4yxn3tg8d",
+      "updated": 1755850712000,
+      "properties": {
+        "title": "Util",
+        "date": "2025-08-06 16:46:24",
+        "updated": "2025-08-22 16:18:32"
+      },
+      "catalog": [
+        {
+          "title": "深度学习",
+          "doc_id": "rlxt1rl4yxn3tg8d"
+        },
+        {
+          "title": "Transformer",
+          "doc_id": "rlxt1rl4yxn3tg8d"
+        },
+        {
+          "title": "TubeDETR",
+          "doc_id": "rlxt1rl4yxn3tg8d"
+        }
+      ],
+      "realName": "Util",
+      "relativePath": "/深度学习/Transformer/TubeDETR/Util.md",
+      "docPath": "source/_posts/深度学习/Transformer/TubeDETR"
     },
     {
       "id": 231268547,
