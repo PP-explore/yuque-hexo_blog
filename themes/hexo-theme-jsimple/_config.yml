@@ -110,8 +110,8 @@ comments:
 
 ## 微软的clarity服务
 clarity:
-  enable: false
-  configId: 54321
+  enable: true
+  configId: syv1o9uf0s
 
 
 ## Google AdSense.
