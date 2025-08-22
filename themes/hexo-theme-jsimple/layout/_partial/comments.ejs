@@ -2,13 +2,6 @@
     <% if (theme.comments.shortname) { %>
         <div id="disqus_thread"></div>
         <script>
-
-			console.log("Disqus Config:", {
-				enabled: <%= theme.comments.enable %>,
-				shortname: "<%= theme.comments.shortname %>",
-				url: "<%= config.url %>"
-			});
-
             if (location.origin === '<%= config.url %>') {
                 var disqus_config = function () {
                     this.page.url = location.href;

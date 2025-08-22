@@ -3,8 +3,7 @@ Thumbs.db
 .idea
 db.json
 *.log
-source/_posts/*
-source/_posts/**/*
+
 node_modules/
 public/
 .deploy*/
