@@ -103,11 +103,13 @@ comments:
   enable: false
   shortname: pprnb
   configId: 12345
+  count: true
 
 ## 微软的clarity服务
 clarity:
   enable: false
   configId: 54321
+
 
 ## Google AdSense.
 adsense:
