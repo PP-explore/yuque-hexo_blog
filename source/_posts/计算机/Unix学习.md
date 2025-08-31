@@ -1,7 +1,7 @@
 ---
 title: Unix学习
 date: '2025-08-21 16:27:02'
-updated: '2025-08-22 20:48:01'
+updated: '2025-08-22 21:32:15'
 categories:
   - 计算机
 tags:
