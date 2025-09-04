@@ -1,0 +1,396 @@
+---
+title: Ngnix
+date: '2025-09-01 14:20:55'
+updated: '2025-09-02 16:05:26'
+categories:
+  - JAVA
+tags:
+  - JAVA
+  - 后端
+  - ngnix
+cover: /images/custom-cover.jpg
+recommend: true
+---
+## Nginx反向代理
+### 正向代理和反向代理理解
+正向代理: 顺着请求的方向进行的代理, 代理服务器是为客户端服务, 目的是去请求目标服务器的地址
+
+如我们使用的VPN即是正向代理
+
+![](/images/70d5a1b7da0771d6ad0dccf29b22a036.png)
+
+反向代理: 是为了目标服务器进行服务的,客户端只能看到目标代理服务器而无法感知实际响应的服务器节点
+
+![](/images/7606adffa3fe35471d8f37533a6e1a73.png)
+
+<font style="color:rgb(0, 0, 0);">联系:</font>
+
+1. <font style="color:rgb(0, 0, 0);">正向代理中，proxy和client同属一个LAN，对server透明；</font>
+2. <font style="color:rgb(0, 0, 0);">反向代理中，proxy和server同属一个LAN，对client透明。</font>
+
+## Ngnix能力
+Nginx提供的能力是:
+
++ 提高访问速度  
+因为nginx本身可以进行缓存，如果访问的同一接口，并且做了数据缓存，nginx就直接可把数据返回，不需要真正地访问服务端，从而提高访问速度。
++ 进行负载均衡  
+所谓负载均衡,就是把大量的请求按照我们指定的方式均衡的分配给集群中的每台服务器。
++ 保证后端服务安全  
+因为一般后台服务地址不会暴露，所以使用浏览器不能直接访问，可以把nginx作为请求访问的入口，请求到达nginx后转发到具体的服务中，从而保证后端服务的安全。
+
+## Ngnix配置和使用
+nginx的配置文件是conf目录下的nginx.conf,默认监听的是端口80
+
+windows下启动方式为:
+
+1. 双击nginx.exe
+2. 打开cmd,输入执行nginx.exe
+
+
+
+```python
+
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/json;
+
+    sendfile        on;
+    
+    keepalive_timeout  65;
+
+    server {
+        listen       8080;
+        server_name  localhost;
+        # 指定前端项目所在的位置
+        location / {
+            root   html/hmdp;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+
+        location /api {  
+            default_type  application/json;
+            #internal;  
+            keepalive_timeout   30s;  
+            keepalive_requests  1000;  
+            #支持keep-alive  
+            proxy_http_version 1.1;  
+            rewrite /api(/.*) $1 break;  
+            proxy_pass_request_headers on;
+            #more_clear_input_headers Accept-Encoding;  
+            proxy_next_upstream error timeout;  
+            proxy_pass http://127.0.0.1:8081;
+            #proxy_pass http://backend;
+        }
+    }
+
+    upstream backend {
+        server 127.0.0.1:8081 max_fails=5 fail_timeout=10s weight=1;
+        #server 127.0.0.1:8082 max_fails=5 fail_timeout=10s weight=1;
+    }  
+}
+
+```
+
+:::success
+我们修改配置文件nginx.conf时,不需要关闭nginx后重新启动,只需要执行指令nginx -s reload 即可生效
+
+:::
+
+## Ngnix原理解析
+:::success
+Nginx低资源消耗、高稳定、高性能的并发能力来之与他的代码架构。
+
+采用多进程模型，具有低资源消耗的特性
+
+事件驱动的异步非阻塞多进程请求处理模型，  实现高性能的并发处理
+
+:::
+
+### <font style="color:rgb(66, 65, 65);">多进程模型</font>
+<font style="color:rgb(66, 65, 65);">考虑到进程是操作系统分配的最小单位,系统在进行内核管理和进程调度的时候,需要执行保存当前进程的上下文、更新控制信息，选择就绪进程和恢复就绪进程等系列操作，频繁切进程造成资源消耗。</font>
+
+<font style="color:rgb(66, 65, 65);">Nginx 则采用的是固定数量的多进程模型（见下图），由一个主进程（Master Process）和数量与主机 CPU 核数相同的工作进程协同处理各种事件。</font>**<font style="color:rgb(66, 65, 65);">主管理进程负责工作进程的配置加载、启停等操作</font>**<font style="color:rgb(66, 65, 65);">，</font>**<font style="color:rgb(66, 65, 65);">工作进程负责处理具体请求。</font>**![](/images/5baa7c1b326786087969a16f76521fe4.png)
+
+进程资源是独立的，每个工作进程处理多个链接，**每个链接有一个工作线程全权处理**，不需要进程切换。默认配置下，**工作进程的数量与主机核数相同**。充分利用CPU和进程的亲缘性affinity。
+
+> ## <font style="color:rgb(0, 0, 0);">亲缘性</font>
+> <font style="color:rgb(0, 0, 0);">亲缘性的作用就是把</font>[<font style="color:rgb(10, 66, 145);">线程</font>](https://zhida.zhihu.com/search?content_id=211319655&content_type=Article&match_order=1&q=%E7%BA%BF%E7%A8%8B&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUyNDkyMDYsInEiOiLnur_nqIsiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjoyMTEzMTk2NTUsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.VjIDHIdzs-zEWqmXPxAPuAC2toHJQKv_CnY4_rrvUhA&zhida_source=entity)<font style="color:rgb(0, 0, 0);">or进程与CPU做黏合，也就是说，做了亲缘性的线程或进程，只会在这一个CPU核上运行，只在这一个CPU核上被调度，且不会切换到其他的</font>[<font style="color:rgb(10, 66, 145);">CPU核</font>](https://zhida.zhihu.com/search?content_id=211319655&content_type=Article&match_order=3&q=CPU%E6%A0%B8&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NTUyNDkyMDYsInEiOiJDUFXmoLgiLCJ6aGlkYV9zb3VyY2UiOiJlbnRpdHkiLCJjb250ZW50X2lkIjoyMTEzMTk2NTUsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MywiemRfdG9rZW4iOm51bGx9.jPr3r4-LD_nYHUqId8Qkhhg5dlZUAgfBxLW6DaKJ8vQ&zhida_source=entity)<font style="color:rgb(0, 0, 0);">上运行。这就是亲缘性。</font>
+>
+
+<font style="color:rgb(66, 65, 65);">Nginx 主进程负责监听外部控制信号，通过</font>**<font style="color:rgb(66, 65, 65);">频道机制</font>**<font style="color:rgb(66, 65, 65);">将相关信号操作传递给工作进程，多个工作进程间通过共享内存来共享数据和信息。</font>
+
+**<font style="color:rgb(66, 65, 65);">1) 信号</font>**
+
+<font style="color:rgb(66, 65, 65);">信号（signal）又称软中断信号，可通过调用系统命令</font>`<font style="color:rgb(53, 83, 182);background-color:rgba(162, 160, 158, 0.14);">kill</font>`<font style="color:rgb(66, 65, 65);">来</font>**<font style="color:rgb(66, 65, 65);">发送信号实现进程通信</font>**<font style="color:rgb(66, 65, 65);">。在 Nginx 系统中，主进程负责监听外部信号，实现对进程的热加载、平滑重启及安全关闭等操作的响应</font>
+
+**<font style="color:rgb(66, 65, 65);">2) 频道</font>**
+
+**<font style="color:rgb(66, 65, 65);">频道（channel）</font>**<font style="color:rgb(66, 65, 65);">是 Nginx </font>**<font style="color:rgb(66, 65, 65);">主进程向工作进程传递信号操作的通信方</font>**<font style="color:rgb(66, 65, 65);">式，用于将控制工作进程的信号操作传递给工作进程。通信频道的原理是</font>**<font style="color:rgb(66, 65, 65);">应用 socketpair 方法</font>**<font style="color:rgb(66, 65, 65);">使用本机的 socket 方式实现进程间的通信。主进程发送频道消息，工作进程接收频道消息并执行相应操作，如工作进程的创建与停止等。</font>
+
+<font style="color:rgb(66, 65, 65);">创建工作进程时会将接收频道消息的套接字注册到对应的事件引擎（如 epoll）中，当事件引擎监听到主进程发送的频道消息时，就会触发回调函数通知工作进程执行响应操作。</font>
+
+**<font style="color:rgb(66, 65, 65);">3) 共享内存</font>**
+
+<font style="color:rgb(66, 65, 65);">共享内存是 Linux 操作系统下进程间的一种简单、高效的通信方式，其允许多个进程访问同一个内存地址，一个进程改变了内存中的内容后，其他进程都可以使用变更后的内容。Nginx 的多个进程间就是通过共享内存的方式共享数据的，主进程启动时创建共享内存，工作进程创建（fork 方式）完成后，所有的进程都开始使用共享内存。</font>
+
+<font style="color:rgb(66, 65, 65);">用户可</font>**<font style="color:rgb(66, 65, 65);">以在配置文件中配置共享内存名称和大小</font>**<font style="color:rgb(66, 65, 65);">，定义不同的共享内存块供 Nginx 不同的功能使用，Nginx 解析完配置文件后，会将定义的共享内存</font>**<font style="color:rgb(66, 65, 65);">通过 slab 机制</font>**<font style="color:rgb(66, 65, 65);">进行内部统一划分和管理。</font>
+
+**<font style="color:rgb(66, 65, 65);">4) 进程调度</font>**
+
+<font style="color:rgb(66, 65, 65);">当工作进程被创建时，每个工作进程都继承了主进程的监听套接字（socket），所以所有工作进程的事件监听列表中会共享相同的监听套接字。但是</font>**<font style="color:rgb(66, 65, 65);">多个工作进程间同一时间内只能由一个工作进程接收网络连接</font>**<font style="color:rgb(66, 65, 65);">，为使多个工作进程间能够协调工作，Nginx 的工作进程有如下几种调度方式:</font>
+
+#### <font style="color:rgb(66, 65, 65);">① 无调度模式</font>
+**<font style="color:rgb(66, 65, 65);">所有工作进程都会在连接事件被触发时争相与客户端建立连接</font>**<font style="color:rgb(66, 65, 65);">，建立连接成功则开始处理客户端请求。无调度模式下所有进程都会争抢资源，但最终只有一个进程可以与客户端建立连接，对于系统而言这将在瞬间产生大量的资源消耗，这就是所谓的</font>**<font style="color:rgb(66, 65, 65);">惊群现象</font>**<font style="color:rgb(66, 65, 65);">。</font>
+
+#### <font style="color:rgb(66, 65, 65);">② 互斥锁模式（accept_mutex）</font>
+<font style="color:rgb(66, 65, 65);">互斥锁是一种声明机制，每个工作进程都</font>**<font style="color:rgb(66, 65, 65);">会周期性地争抢互斥锁</font>**<font style="color:rgb(66, 65, 65);">，一旦某个工作进程抢到互斥锁，就表示其拥有接收 HTTP 建立连接事件的处理权，并将当前进程的 socket 监听注入事件引擎（如 epoll）中，接收外部的连接事件。</font>
+
+<font style="color:rgb(66, 65, 65);">其他工作进程只能继续处理已经建立连接的读写事件，并</font>**<font style="color:rgb(66, 65, 65);">周期性地轮询查看互斥锁的状态</font>**<font style="color:rgb(66, 65, 65);">，只有互斥锁被释放后工作进程才可以抢占互斥锁，获取 HTTP 建立连接事件的处理权。</font>**<font style="color:rgb(66, 65, 65);">当工作进程最大连接数的 1/8 与该进程可用连接（free_connection）的差大于或等于 1 时，则放弃本轮争抢互斥锁的机会，不再接收新的连接请求，只处理已建立连接的读写事件。(即在当前连接数超过7/8时会放弃抢夺互斥锁)</font>**
+
+<font style="color:rgb(66, 65, 65);">互斥锁模式有效地避免了惊群现象，对于大量 HTTP 的短连接，该机制有效避免了因工作进程争抢事件处理权而产生的资源消耗。</font>**<font style="color:rgb(66, 65, 65);">但对于大量启用长连接方式的 HTTP 连接，互斥锁模式会将压力集中在少数工作进程上，进而因工作进程负载不均而导致 QPS 下降。</font>**
+
+#### <font style="color:rgb(66, 65, 65);">③ 套接字分片（Socket Sharding）</font>
+<font style="color:rgb(66, 65, 65);">套接字分片是由内核提供的一种分配机制，该机制允许每个工作进程都有一组相同的监听套接字。当有外部连接请求时，由内核决定哪个工作进程的套接字监听可以接收连接。这</font>**<font style="color:rgb(66, 65, 65);">有效避免了惊群现象的发生，相比互斥锁机制提高了多核系统的性能</font>**<font style="color:rgb(66, 65, 65);">。该功能</font>**<font style="color:rgb(66, 65, 65);">需要在配置 listen 指令时启用 reuseport 参</font>**<font style="color:rgb(66, 65, 65);">数。</font>
+
+:::success
+<font style="color:rgb(66, 65, 65);">Nginx 1.11.3 以后的版本中互斥锁模式默认是关闭的，由于 Nginx 的工作进程数量有限，且 Nginx 通常会在高并发场景下应用，很少有空闲的工作进程，所以惊群现象的影响不大。无调度模式因少了争抢互斥锁的处理，在高并发场景下可提高系统的响应能力。套接字分片模式则因为由 Linux 内核提供进程的调度机制，所以性能最好。</font>
+
+:::
+
+**<font style="color:rgb(66, 65, 65);">5) 事件驱动 **</font>**
+
+<font style="color:rgb(66, 65, 65);">事件驱动程序设计（Event-Driven Programming）是一种程序设计模型，这种模型的程序流程是由外部操作或消息交互事件触发的。其代码架构通常是预先设计一个事件循环方法，再由这个事件循环方法不断地检查当前要处理的信息，并根据相应的信息触发事件函数进行事件处理。通常未被处理的事件会放在事件队列中等待处理，而被事件函数处理的事件也会形成一个事件串，因此</font>**<font style="color:rgb(66, 65, 65);">事件驱动模型的重点就在于事件处理的弹性和异步化。</font>**
+
+<font style="color:rgb(66, 65, 65);">为了确保操作系统运行的稳定性，Linux 系统将用于寻址操作的虚拟存储器分为内核空间和用户空间，所有硬件设备的操作都是在内核空间中实现的。当应用程序监听的网络接口接收到网络数据时，内核会先把数据保存在内核空间的缓冲区中，然后再由应用程序复制到用户空间进行处理。</font>
+
+<font style="color:rgb(66, 65, 65);">Linux 操作系统下所有的设备都被看作文件来操作，所有的文件都通过文件描述符（File Descriptor，FD）集合进行映射管理。套接字是应用程序与 TCP/IP 协议通信的中间抽象层，也是一种特殊的文件，应用程序以文件描述符的方式对其进行读/写（I/O）、打开或关闭操作。每次对 socket 进行读操作都需要等待数据准备（数据被读取到内核缓冲区），然后再将数据从内核缓冲区复制到用户空间。</font>
+
+<font style="color:rgb(66, 65, 65);">为了提高网络 I/O 操作的性能，操作系统设计了多种 I/O 网络模型。</font>**<font style="color:rgb(66, 65, 65);">在 Linux 系统下，网络并发应用处理最常用的就是 I/O 多路复用模型</font>**<font style="color:rgb(66, 65, 65);">，该模型是一种一个进程可以监视多个文件描述符的机制，一旦某个文件描述符就绪（数据准备就绪），进程就可以进行相应的读写操作。</font>
+
+**<font style="color:rgb(66, 65, 65);">epoll 模型是 Linux 系统下 I/O 多路复用模型里最高效的 I/O 事件处理模型</font>**<font style="color:rgb(66, 65, 65);">，其最大并发连接数仅受内核的最大打开文件数限制，在 1GB 内存下可以监听 10 万个端口。epoll 模型监听的所有连接中，只有数据就绪的文件描述符才会调用应用进程、触发响应事件，从而提升数据处理效率。</font>**<font style="color:rgb(66, 65, 65);">epoll 模型利用 mmap 映射内存加速与内核空间的消息传递，从而减少复制消耗。</font>**
+
+<font style="color:rgb(66, 65, 65);">作为 Web 服务器，Nginx 的基本功能是处理网络事件，快速从网络接口读写数据。</font>**<font style="color:rgb(66, 65, 65);">Nginx 结合操作系统的特点，基于 I/O 多路复用模型的事件驱动程序设计，采用了异步非阻塞的事件循环方法响应处理套接字上的 accept 事件</font>**<font style="color:rgb(66, 65, 65);">，使其在调用 accept 时不会长时间占用进程的 CPU 时间片，从而能够及时处理其他工作。通过事件驱动的异步非阻塞机制（见下图），使大量任务可以在工作进程中得到高效处理，以应对高并发的连接和请求。</font>![](/images/022102dd103c782a8681a73cabab7936.png)
+
+## <font style="color:rgb(66, 65, 65);">工作流机制</font>
+<font style="color:rgb(66, 65, 65);">Nginx 在处理客户端请求时，每个连接仅由一个进程进行处理，</font>**<font style="color:rgb(66, 65, 65);">每个请求仅运行在一个工作流中</font>**<font style="color:rgb(66, 65, 65);">，工作流被划分为多个阶段（见下图），请求在不同阶段由功能模块进行数据处理，处理结果异常或结束则将结果返回客户端，否则将进入下一阶段。工作进程维护工作流的执行，并</font>**<font style="color:rgb(66, 65, 65);">通过工作流的状态推动工作流完成请求操作的闭环。</font>**
+
+![](/images/4150e058811401bae9ac2480f0913b0d.png)
+
+**<font style="color:rgb(66, 65, 65);">1) HTTP 请求处理阶段</font>**
+
+**<font style="color:rgb(66, 65, 65);">HTTP 请求处理阶段可以让每个模块仅在该阶段独立完成该阶段可实现的功能，而整个 HTTP 请求则是由多个功能模块共同处理完成的。</font>**
+
+<font style="color:rgb(66, 65, 65);">HTTP 请求的处理过程可分为 11 个阶段，HTTP 请求处理阶段如下表所示。</font>
+
+| **<font style="color:rgb(109, 108, 107);">阶段标识</font>** | **<font style="color:rgb(109, 108, 107);">阶段说明</font>** |
+| --- | --- |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_POST_READ_PHASE</font> | <font style="color:rgb(66, 65, 65);">读取请求阶段，会进行 HTTP 请求头的读取和解析处理</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_SERVER_REWRITE_PHASE</font> | <font style="color:rgb(66, 65, 65);">server 重定向阶段，会在 URI进入location路由前修改 URI 的内容，进行重定向处理</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_FIND_CONFIG_PHASE</font> | <font style="color:rgb(66, 65, 65);">URI 匹配阶段，URI 进行 location 匹配处理，该阶段不支持外部模块引入</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_REWRITE_PHASE</font> | <font style="color:rgb(66, 65, 65);">rewrite 重写阶段，对 URI 执行 rewrite 规则修改处理</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_POST_REWRITE_PHASE</font> | <font style="color:rgb(66, 65, 65);">rewrite 重写结束阶段，对 rewrite 的结果执行跳转操作并进行次数验证，超过 10 次的则认为是死循环，返回 500 错误。该阶段不支持外部模块引入</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_PREACCESS_PHASE</font> | <font style="color:rgb(66, 65, 65);">访问控制前阶段，进行连接数、单 IP 访问频率等的处理</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_ACCESS_PHASE</font> | <font style="color:rgb(66, 65, 65);">访问控制阶段，进行用户认证、基于源 IP 的访问控制等处理</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_POST_ACCESS_PHASE</font> | <font style="color:rgb(66, 65, 65);">访问控制结束阶段，对访问控制的结果进行处理，如向用户发送拒绝访问等响应。该阶段不支持外部模块引入</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_PRECONTENT_PHASE</font> | <font style="color:rgb(66, 65, 65);">访问内容前阶段，对目标数据进行内容检验等操作。以前的版本称为 NGX_HTTP_TRY_FILES_PHASE，try_files 和 mirror 功能在这个阶段被执行</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_CONTENT_PHASE</font> | <font style="color:rgb(66, 65, 65);">访问内容阶段，执行读取本地文件，返回响应内容等操作</font> |
+| <font style="color:rgb(66, 65, 65);">NGX_HTTP_LOG_PHASE</font> | <font style="color:rgb(66, 65, 65);">日志记录阶段，处理完请求，进行日志记录</font> |
+
+
+### <font style="color:rgb(66, 65, 65);">2) TCP/UDP 处理阶段</font>
+<font style="color:rgb(66, 65, 65);">TCP/UDP 会话一共会经历 7 个处理阶段，每个 TCP/UDP 会话会自上而下地按照7个阶段进行流转处理，每个处理阶段的说明如下表所示。</font>
+
+| **<font style="color:rgb(109, 108, 107);">阶段标识</font>** | **<font style="color:rgb(109, 108, 107);">阶段说明</font>** |
+| --- | --- |
+| <font style="color:rgb(66, 65, 65);">Post-accept</font> | <font style="color:rgb(66, 65, 65);">接收客户端连接请求后的第一阶段。模块 ngx_stream_realip_module 在这个阶段被调用</font> |
+| <font style="color:rgb(66, 65, 65);">Pre-access</font> | <font style="color:rgb(66, 65, 65);">访问处理前阶段。模块 ngx_stream_limit_conn_module 在这个阶段被调用</font> |
+| <font style="color:rgb(66, 65, 65);">Access </font> | <font style="color:rgb(66, 65, 65);">访问处理阶段。模块 ngx_stream_access_module 在这个阶段被调用</font> |
+| <font style="color:rgb(66, 65, 65);">SSL</font> | <font style="color:rgb(66, 65, 65);">TLS/SSL 处理阶段。模块 ngx_stream_ssl_module 在这个阶段被调用</font> |
+| <font style="color:rgb(66, 65, 65);">Preread</font> | <font style="color:rgb(66, 65, 65);">数据预读阶段。将 TCP/UDP 会话数据的初始字节读入预读缓冲区，以允许 ngx_stream_ssl_preread_module 之类的模块在处理之前分析</font> |
+| <font style="color:rgb(66, 65, 65);">Content </font> | <font style="color:rgb(66, 65, 65);">数据数据处理阶段。通常将 TCP/UDP 会话数据代理到上游服务器，或将模块 ngx_stream_return_module 指定的值返回给客户端</font> |
+| <font style="color:rgb(66, 65, 65);">Log</font> | <font style="color:rgb(66, 65, 65);">记录客户端会话处理结果的最后阶段。模块 ngx_stream_log_module 在这个阶段被调用</font> |
+
+
+:::success
+<font style="color:rgb(66, 65, 65);">Nginx 功能模块就是根据不同的功能目的，按照模块开发的加载约定嵌入不同的处理阶段的。</font>
+
+:::
+
+## <font style="color:rgb(66, 65, 65);">模块化</font>
+<font style="color:rgb(66, 65, 65);">Nginx 一直秉持模块化的理念，其模块化的架构中，</font>**<font style="color:rgb(66, 65, 65);">除了少量的主流程代码，都是模块</font>**<font style="color:rgb(66, 65, 65);">。模块化的设计为 Nginx 提供了高度的</font>**<font style="color:rgb(66, 65, 65);">可配置、可扩展、可定制特性</font>**<font style="color:rgb(66, 65, 65);">。模块代码包括核心模块和功能模块两个部分:核心模块负责维护进程的运行、内存及事件的管理；功能模块则负责具体功能应用的实现，包括路由分配、内容过滤、网络及磁盘数据读写、代理转发、负载均衡等操作。Nginx 的</font>**<font style="color:rgb(66, 65, 65);">高度抽象接口使用户很容易根据开发规范进行模块开发，有很多非常实用的第三方模块被广泛使用。</font>**
+
+**<font style="color:rgb(66, 65, 65);">1) 模块分类</font>**
+
+#### <font style="color:rgb(66, 65, 65);">① 核心模块（core）</font>
+<font style="color:rgb(66, 65, 65);">该模块提供了 Nginx 服务运行的基本功能，如 Nginx 的进程管理、CPU 亲缘性、内存管理、配置文件解析、日志等功能。</font>
+
+#### <font style="color:rgb(66, 65, 65);">② 事件模块（event）</font>
+<font style="color:rgb(66, 65, 65);">该模块负责进行连接处理，提供对不同操作系统的 I/O 网络模型支持和自动根据系统平台选择最有效 I/O 网络模型的方法。</font>
+
+#### <font style="color:rgb(66, 65, 65);">③ HTTP模块（http）</font>
+<font style="color:rgb(66, 65, 65);">该模块提供 HTTP 处理的核心功能和部分功能模块，HTTP 核心功能维护了 HTTP 多个阶段的工作流，并实现了对各种 HTTP 功能模块的管理和调用。</font>
+
+#### <font style="color:rgb(66, 65, 65);">④ Mail模块（mail）</font>
+<font style="color:rgb(66, 65, 65);">该模块实现邮件代理功能，代理 IMAP、POP3、SMTP 协议。</font>
+
+#### <font style="color:rgb(66, 65, 65);">⑤ Stream模块（stream）</font>
+<font style="color:rgb(66, 65, 65);">该模块提供 TCP/UDP 会话的代理和负载相关功能。</font>
+
+#### <font style="color:rgb(66, 65, 65);">⑥ 第三方模块</font>
+<font style="color:rgb(66, 65, 65);">第三方模块即非 Nginx 官方开发的功能模块，据统计，在开源社区发布的第三方模块已经达到 100 多个，其中 lua-resty、nginx-module-vts 等模块的使用度非常高。</font>
+
+**<font style="color:rgb(66, 65, 65);">2) 动态模块</font>**
+
+<font style="color:rgb(66, 65, 65);">Nginx 早期版本在进行模块编译时，通过编译配置（configure）选项</font>`<font style="color:rgb(53, 83, 182);background-color:rgba(162, 160, 158, 0.14);">--with_module</font>`<font style="color:rgb(66, 65, 65);">和</font>`<font style="color:rgb(53, 83, 182);background-color:rgba(162, 160, 158, 0.14);">--without-module</font>`<font style="color:rgb(66, 65, 65);">决定要编译哪些模块，被选择的模块代码与 Nginx 核心代码被编译到同一个 Nginx 二进制文件中，Nginx 文件每次启动时都会加载所有的模块。这是一种静态加载模块的方式。随着第三方模块的增多和 Nginx Plus 的推出，模块在不重新编译 Nginx 的情况下被动态加载成为迫切的需求。</font>
+
+<font style="color:rgb(66, 65, 65);">Nginx</font>**<font style="color:rgb(66, 65, 65);"> 从 1.9.11 版本开始支持动态加载模块的功能</font>**<font style="color:rgb(66, 65, 65);">，该功能使 Nginx 可以在运行时有选择地加载 Nginx 官方或第三方模块。为使动态模块更易于使用，Nginx 官方还提供了 pkg-oss 工具，该工具可为任何动态模块创建可安装的动态模块包。</font>
+
+<font style="color:rgb(66, 65, 65);">在 Nginx 开源版本的代码中，编译配置选项中含有</font>`<font style="color:rgb(53, 83, 182);background-color:rgba(162, 160, 158, 0.14);">=dynamic</font>`<font style="color:rgb(66, 65, 65);">选项，表示支持动态模块加载。例如，模块 http_xslt_module 的动态模块编译配置选项示例如下。</font>
+
+<font style="color:rgb(66, 65, 65);">./configure --with-http_xslt_module=dynamic 编译后，模块文件以 so 文件的形式独立存储于 Nginx 的 modules 文件夹中。动态模块编译如下图所示。</font>
+
+![](/images/777af8d34956069788eedd67fb8765a8.gif)
+
+<font style="color:rgb(66, 65, 65);">图:动态模块编译</font>
+
+<font style="color:rgb(66, 65, 65);">在不同编译配置选项下，Nginx 在编译时会因为某些结构字段未被使用而不会将其编译到代码中，因此就会出现不同编译配置选项的动态模块无法加载的问题。为解决这个问题，Nginx 在编译配置选项中提供了</font>`<font style="color:rgb(53, 83, 182);background-color:rgba(162, 160, 158, 0.14);">--with-compat</font>`<font style="color:rgb(66, 65, 65);">选项，在进行 Nginx 及动态模块编译配置时如果使用了该选项，在相同版本的 Nginx 代码下，动态模块即使与 Nginx 执行文件的其他编译配置选项不同，也可以被 Nginx 执行文件加载。启用兼容参数编译的示例如下:</font>
+
+<font style="color:rgb(66, 65, 65);">./configure --with-compat --with-http_xslt_module=dynamic 可以在配置文件中使用 load_module 指令加载动态模块，示例如下:</font>
+
+<font style="color:rgb(66, 65, 65);">load_module "modules/ngx_http_xslt_filter_module.so";</font>
+
+## Nginx三种关于负载均衡的方式
+轮询法（默认方法）：
+
+每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。
+
+适合服务器配置相当，无状态且短平快的服务使用。也适用于图片服务器集群和纯静态页面服务器集群。
+
+weight权重模式（加权轮询）：
+
+指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的
+
+情况。
+
+这种方式比较灵活，当后端服务器性能存在差异的时候，通过配置权重，可以让服务器的性能得到充分发挥，有效利用资源。weight和访问比率成正比，用于后端服务器性能不均的情况。权重越高，在被访问的概率越大
+
+ip_hash：
+
+上述方式存在一个问题就是说，在负载均衡系统中，假如用户在某台服务器上登录了，那么该用户第二次请求的时候，因为我们是负载均衡系统，每次请求都会重新定位到服务器集群中的某一个，那么已经登录某一个服务器的用户再重新定位到另一个服务器，其登录信息将会丢失，这样显然是不妥的。
+
+我们可以采用ip_hash指令解决这个问题，如果客户已经访问了某个服务器，当用户再次访问时，会将该请求通过哈希算法，自动定位到该服务器。每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。
+
+
+
+nignix.conf代码示例:
+
+```yaml
+#nginx进程数，建议设置为等于CPU总核心数。
+worker_processes  1;
+# 事件区块开始
+events {
+    #单个进程最大连接数（最大连接数=连接数*进程数）
+    #根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。
+    worker_connections  1024;
+}
+#设定http服务器，利用它的反向代理功能提供负载均衡支持
+http {
+    #include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中
+    include       mime.types;
+     #默认文件类型
+    default_type  application/octet-stream;
+    #开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。
+    #sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。
+    sendfile        on;
+      #长连接超时时间，单位是秒
+    keepalive_timeout  65;
+    # 第一个Server区块开始，表示一个独立的虚拟主机站点
+    server {
+        # 提供服务的端口，默认80
+        listen       80;
+        # 提供服务的域名主机名
+        server_name  localhost;
+        #对 "/" 启用反向代理,第一个location区块开始
+        location / {
+            root   html;  #服务默认启动目录
+            index  index.html index.htm; # 默认的首页文件，多个用空格分开
+        }
+         # 错误页面路由
+        error_page   500 502 503 504  /50x.html; # 出现对应的http状态码时，使用50x.html回应客户
+        location = /50x.html { # location区块开始，访问50x.html
+            root   html;  # 指定对应的站点目录为html
+        }
+    }
+}
+```
+
+![](/images/2b1fb78be1d02b98aa535234c96dfeb0.png)
+
+
+
+```yaml
+
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/json;
+
+    sendfile        on;
+    
+    keepalive_timeout  65;
+
+    server {
+        listen       8080;
+        server_name  localhost;
+        # 指定前端项目所在的位置
+        location / {
+            root   html/hmdp;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+
+        location /api {  
+            default_type  application/json;
+            #internal;  
+            keepalive_timeout   30s;  
+            keepalive_requests  1000;  
+            #支持keep-alive  
+            proxy_http_version 1.1;  
+            rewrite /api(/.*) $1 break;  
+            proxy_pass_request_headers on;
+            #more_clear_input_headers Accept-Encoding;  
+            proxy_next_upstream error timeout;  
+            proxy_pass http://127.0.0.1:8081;
+            #proxy_pass http://backend;
+        }
+    }
+
+    upstream backend {
+        server 127.0.0.1:8081 max_fails=5 fail_timeout=10s weight=1;
+        #server 127.0.0.1:8082 max_fails=5 fail_timeout=10s weight=1;
+    }  
+}
+
+```

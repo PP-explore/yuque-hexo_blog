@@ -1,7 +1,7 @@
 ---
 title: Transformer
 date: '2024-06-17 13:59:33'
-updated: '2025-08-22 20:35:18'
+updated: '2025-09-04 16:39:34'
 categories:
   - 人工智能
 tags:
@@ -14,7 +14,7 @@ recommend: true
 
 
 
-Transformer是一种用于自然语言处理（NLP）和其他序列到序列（sequence-to-sequence）任务的深度学习模型架构，它在2017年由Vaswani等人首次提出。Transformer架构引入了自注意力机制（self-attention mechanism），这是一个关键的创新，使其在处理序列数据时表现出色。
+Transformer是一种用于自然语言处理（NLP）和其他**序列到序列**（sequence-to-sequence）任务的深度学习模型架构，它在2017年由Vaswani等人首次提出。Transformer架构引入了自注意力机制（self-attention mechanism），这是一个关键的创新，使其在处理序列数据时表现出色。
 
 以下是Transformer的一些重要组成部分和特点：
 
@@ -31,7 +31,9 @@ Transformer是一种用于自然语言处理（NLP）和其他序列到序列（
 # <font style="color:rgb(77, 77, 77);">模型架构</font>
 <font style="color:rgb(77, 77, 77);">今天，我们来揭示 Transformers 背后的核心概念：注意力机制、</font>[编码器-解码器](https://so.csdn.net/so/search?q=%E7%BC%96%E7%A0%81%E5%99%A8-%E8%A7%A3%E7%A0%81%E5%99%A8&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">架构、多头注意力等等。</font>![](/images/264b170065b0226e32948dbbda65157e.png)
 
-<font style="color:rgb(77, 77, 77);">通过 Python 代码片段，让你深入了解其原理。</font>
+![](/images/271d777328519759c126973e756fe805.jpeg)<font style="color:rgb(77, 77, 77);"></font>
+
+<font style="color:#DF2A3F;">源码对照模型架构</font>
 
 ## <font style="color:rgb(79, 79, 79);">使用位置编码表示序列的顺序</font>
 为什么要用位置编码？
@@ -53,13 +55,120 @@ Transformer是一种用于自然语言处理（NLP）和其他序列到序列（
 
 <font style="color:rgb(77, 77, 77);">现在，让我们深入了解一种特定类型的注意力机制*，称为自注意力，也称为内部注意力。想象一下，当你阅读一句话时，你的大脑会自动突出显示重要的单词或短语来理解意思。这就是神经网络中自注意力的基本原理。它使序列中的每个单词都能“关注”其他单词，包括自己在内，以更好地理解上下文。</font>
 
-## <font style="color:rgb(79, 79, 79);">自注意力是如何工作的？</font>
-<font style="color:rgb(77, 77, 77);">以下是自注意力在一个简单示例中的工作原理：</font>
+注意力机制有三个核心变量：查询值 Query，键值 Key 和 真值 Value。
 
-<font style="color:rgb(77, 77, 77);">考虑一句话：“The cat sat on the mat.”</font>
+Query查询相对应的key, 然后如果query想要关联多个key,那么我们就需要一个注意力分数,分配给不同的key不同的注意力权重, 从直观上讲,可以认为key与query关联性越高,则被赋予的注意力权重就越大.
 
-### <font style="color:rgb(77, 77, 77);">嵌入</font>
-<font style="color:rgb(77, 77, 77);">首先，模型将输入序列中的每个单词嵌入到一个高维向量表示中。这个嵌入过程允许模型捕捉单词之间的语义相似性。</font>
+其采用的计算注意力分数的方法是:
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">通过词向量能够表征语义信息，从而让语义相近的词在向量空间中距离更近，语义较远的词在向量空间中距离更远。我们往往用欧式距离来衡量词向量的相似性，但我们同样也可以用点积来进行度量：</font>
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">v⋅w=∑iviwi</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">v</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">⋅</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">w</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">=</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">i</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">∑</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">viwi</font>_
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">根据词向量的定义，语义相似的两个词对应的词向量的点积应该大于0，而语义不相似的词向量点积应该小于0。</font>
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">那么，我们就可以</font>**<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">用点积来计算词之间的相似度</font>**<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">。假设我们的 Query 为“fruit”，对应的词向量为 q</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">q</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);"> ；我们的 Key 对应的词向量为 </font>![](/images/8e4b53ab28264dc5ea68530fe57214a2.png)<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">,则我们可以计算 Query 和每一个键的相似程度：</font>
+
+![](/images/82e6ef743b49c3c3dba680c81bde506e.png)
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);"> K 即为将所有 Key 对应的词向量堆叠形成的矩阵。基于矩阵乘法的定义，x 即为 q 与每一个 k 值的点积.得到的 x 即反映了 Query 和每一个 Key 的相似程度，我们再通过一个 Softmax 层将其转化为和为 1 的权重：</font>
+
+![](/images/023c96d36a4222c80cf66ef31c24a372.png)
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">向量就能够反映 Query 和每一个 Key 的相似程度，同时又相加权重为 1，也就是我们的</font>**<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">注意力分数</font>**<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">了。</font>
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">可以得到注意力机制计算的基本公式：</font>
+
+![](/images/f22d0221c15d62fdfc9b250f50d5ff51.png)
+
+<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">如果 Q 和 K 对应的维度 </font><font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">dk</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);">dk</font>_<font style="color:rgb(238, 254, 255);background-color:rgb(29, 31, 32);"> 比较大，softmax 放缩时就非常容易受影响，使不同值之间的差异较大，从而影响梯度的稳定性。因此，我们要将 Q 和 K 乘积的结果做一个放缩：</font>
+
+![](/images/fcf8a01c18887a8329ef6494cb2d5910.png)
+
+```yaml
+'''注意力计算函数'''
+def attention(query, key, value, dropout=None):
+    '''
+    args:
+    query: 查询值矩阵
+    key: 键值矩阵
+    value: 真值矩阵
+    '''
+    # 获取键向量的维度，键向量的维度和值向量的维度相同
+    d_k = query.size(-1) 
+    # 计算Q与K的内积并除以根号dk
+    # transpose——相当于转置
+    scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
+    # Softmax
+    p_attn = scores.softmax(dim=-1)
+    if dropout is not None:
+        p_attn = dropout(p_attn)
+        # 采样
+     # 根据计算结果对value进行加权求和
+    return torch.matmul(p_attn, value), p_attn
+
+```
+
+## <font style="color:rgb(79, 79, 79);">自注意力</font>
+<font style="color:#000000;">注意力机制的本质是对两段序列的元素依次进行相似度计算，寻找出</font>**<font style="color:#000000;">一个序列的每个元素对另一个序列</font>**<font style="color:#000000;">的每个元素的相关度，然后基于相关度进行加权，即分配注意力。</font>
+
+<font style="color:#000000;">实际应用中，我们往往只需要计算 Query 和 Key 之间的注意力结果，很少存在额外的真值 Value。也就是说，我们其实只需要拟合两个文本序列。在经典的 注意力机制中，Q 往往来自于一个序列，K 与 V 来自于另一个序列，都通过参数矩阵计算得到，从而可以拟合这两个序列之间的关系。例如在 Transformer 的 Decoder 结构中，Q 来自于 Decoder 的输入，K 与 V 来自于 Encoder 的输出，从而拟合了编码信息与历史信息之间的关系，便于综合这两种信息实现未来的预测。</font>
+
+<font style="color:#000000;">所以Transformer的Encoder结构中, 使用的就是注意力机制的变种------自注意力机制.</font>
+
+<font style="color:#000000;">即是计算本身序列中每个元素对其他元素的注意力分布，即在计算过程中，Q、K、V 都由同一个输入通过不同的参数矩阵计算得到。</font>
+
+<font style="color:#000000;">在 Encoder 中，Q、K、V 分别是</font>**<font style="color:#000000;">输入对参数矩阵 </font>****<font style="color:#000000;">Wq、Wk、Wv</font>**_**<font style="color:#000000;">Wq</font>**_**<font style="color:#000000;">、</font>**_**<font style="color:#000000;">Wk</font>**_**<font style="color:#000000;">、</font>**_**<font style="color:#000000;">Wv</font>**_**<font style="color:#000000;"> 做积</font>**<font style="color:#000000;">得到，从而拟合输入语句中每一个 token 对其他所有 token 的关系。</font>
+
+<font style="color:#000000;">通过自注意力机制，我们可以找到一段文本中每一个 token 与其他所有 token 的相关关系大小，从而建模文本之间的依赖关系。</font>
+
+<font style="color:#000000;">以下是自注意力在一个简单示例中的工作原理：</font>
+
+<font style="color:#000000;">考虑一句话：“The cat sat on the mat.”</font>
+
+### <font style="color:#000000;">掩码自注意力机制 </font><font style="color:#000000;"> Mask Self-Attention</font>
+<font style="color:#000000;">使用注意力掩码的自注意力机制。掩码的作用是遮蔽一些特定位置的 token，模型在学习的过程中，会忽略掉被遮蔽的 token。</font>
+
+<font style="color:#000000;">核心动机是让模型只能使用历史信息进行预测而不能看到未来信息。</font>
+
+<font style="color:#000000;">Transformer 模型也是通过不断根据之前的 token 来预测下一个 token，直到将整个文本序列补全。</font>
+
+<font style="color:#000000;">那么我们可以采用掩码机制来让训练并行化, 构造一个上三角掩码矩阵:</font>
+
+```yaml
+<BOS> 【MASK】【MASK】【MASK】【MASK】
+<BOS>    I   【MASK】 【MASK】【MASK】
+<BOS>    I     like  【MASK】【MASK】
+<BOS>    I     like    you  【MASK】
+<BOS>    I     like    you   </EOS>
+
+```
+
+<font style="color:#000000;">在具体实现中，我们通过以下代码生成 Mask 矩阵：</font>
+
+```python
+# 创建一个上三角矩阵，用于遮蔽未来信息。
+# 先通过 full 函数创建一个 1 * seq_len * seq_len 的矩阵
+mask = torch.full((1, args.max_seq_len, args.max_seq_len), float("-inf"))
+# triu 函数的功能是创建一个上三角矩阵
+mask = torch.triu(mask, diagonal=1)
+```
+
+<font style="color:#000000;">生成的 Mask 矩阵会是一个上三角矩阵，上三角位置的元素均为 -inf，其他位置的元素置为0。</font>
+
+<font style="color:#000000;">在注意力计算时，我们会将计算得到的注意力分数与这个掩码做和，再进行 Softmax 操作：</font>
+
+```python
+# 此处的 scores 为计算得到的注意力分数，mask 为上文生成的掩码矩阵
+scores = scores + mask[:, :seqlen, :seqlen]
+scores = F.softmax(scores.float(), dim=-1).type_as(xq)
+```
+
+<font style="color:#000000;">做 Softmax 操作，</font>`<font style="color:#000000;">-inf</font>`<font style="color:#000000;"> 的值在经过 Softmax 之后会被置为 0，从而忽略了上三角区域计算的注意力分数，从而实现了注意力遮蔽。</font>
+
+<font style="color:#000000;">多头注意力机制</font>
+
+
 
 ### <font style="color:rgb(77, 77, 77);">查询、键和值向量</font>
 <font style="color:rgb(77, 77, 77);">接下来，模型为序列中的每个单词</font>**<font style="color:rgb(77, 77, 77);">计算三个向量</font>**<font style="color:rgb(77, 77, 77);">：查询向量、键向量和值向量。</font>
@@ -68,7 +177,7 @@ Transformer是一种用于自然语言处理（NLP）和其他序列到序列（
 
 <font style="color:rgb(77, 77, 77);">（这三个向量是</font><font style="color:#DF2A3F;">通过</font><font style="color:rgb(77, 77, 77);">词嵌入与</font><font style="color:#DF2A3F;">三个权重矩阵即W^Q,W^K,W^V </font><font style="color:rgb(77, 77, 77);">相乘后创建出来的）</font>
 
-<font style="color:rgb(77, 77, 77);">新向量在维度上往往比词嵌入向量更低。（512->64）在训练过程中，模型学习这些向量，每个向量都有不同的作用。</font>
+<font style="color:rgb(77, 77, 77);">新向量在维度上往往比词嵌入向量更低(由权重矩阵最后一个维度相关)。（512->64）在训练过程中，模型学习这些向量，每个向量都有不同的作用。</font>
 
 1. <font style="color:rgb(77, 77, 77);">查询向量表示单词的查询，即模型在序列中寻找的内容。</font>
 2. <font style="color:rgb(77, 77, 77);">键向量表示单词的键，即序列中其他单词应该注意的内容。</font>
@@ -85,7 +194,7 @@ Transformer是一种用于自然语言处理（NLP）和其他序列到序列（
 
 ![](/images/c8c25ed3bd1240d83384c630ce2df4c9.png)
 
-接下来是将分数除以8(<font style="background-color:#FBDE28;">8是论文中使用的键向量的维数64的平方根</font>，这会让梯度更稳定。这里也可以使用其它值，8只是默认值，这样做是为了防止内积过大。)，然后通过softmax传递结果。
+接下来是将分数除以8(<font style="background-color:#FBDE28;">8是论文中使用的键向量的维数64的平方根</font>，这会让梯度更稳定。这里也可以使用其它值，8只是默认值，这样做是为了防止内积过大,影响后面softmax分配权重)，然后通过softmax传递结果。
 
 
 
@@ -95,7 +204,7 @@ Transformer是一种用于自然语言处理（NLP）和其他序列到序列（
 <font style="color:rgb(77, 77, 77);">然后，使用 softmax 函数对注意力分数进行归一化，以获得</font>**<font style="color:#DF2A3F;">注意力权重</font>**<font style="color:rgb(77, 77, 77);">。这些权重表示每个单词应该关注序列中其他单词的程度。随着模型处理输入序列的每个单词，自注意力会关注整个输入序列的所有单词，帮助模型对本单词更好地进行编码。softmax的作用是使所有单词的分数归一化，得到的分数都是正值且和为1。注意力权重较高的单词被认为对正在执行的任务更为关键。</font>
 
 ### <font style="color:rgb(77, 77, 77);">加权求和</font>
-<font style="color:rgb(77, 77, 77);">最后，将</font><font style="color:#DF2A3F;">每个值向量乘以softmax分数</font><font style="color:rgb(77, 77, 77);">(这是为了准备之后将它们求和)。这里的直觉是希望关注语义上相关的单词，并弱化不相关的单词(例如，让它们乘以0.001这样的小数)。使用注意力权重计算值向量的加权和。这产生了每个序列中单词的</font>[自注意力机制](https://so.csdn.net/so/search?q=%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">输出，捕获了来自其他单词的上下文信息</font><font style="color:rgb(77, 77, 77);">。</font>
+<font style="color:rgb(77, 77, 77);">最后，将</font><font style="color:#DF2A3F;">每个值向量乘以softmax分数</font><font style="color:rgb(77, 77, 77);">(最终的注意力分数)。使用注意力权重计算值向量的加权和。这产生了每个序列中单词的</font>[自注意力机制](https://so.csdn.net/so/search?q=%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6&spm=1001.2101.3001.7020)<font style="color:rgb(77, 77, 77);">输出，捕获了来自其他单词的上下文信息。</font>
 
 ![](/images/e98eb09bdf4048ea667b063eee0ecdf1.png)
 
@@ -107,7 +216,7 @@ Transformer是一种用于自然语言处理（NLP）和其他序列到序列（
 
 <font style="color:rgb(77, 77, 77);">下面是一个计算注意力分数的简单解释：</font>
 
-```plain
+```python
 # 安装 PyTorch
 !pip install torch==2.2.1+cu121
 
@@ -142,6 +251,8 @@ print(output)
 ```
 
 ## <font style="color:rgb(77, 77, 77);">自注意力层的完善——“多头”注意力机制</font>
+<font style="color:#000000;">Transformer 使用了多头注意力机制（Multi-Head Attention），即同时对一个语料进行多次注意力计算，采用不同初始化的注意力权重,每次注意力计算都能拟合不同的关系，将最后的多次结果拼接起来作为最后的输出，即可更全面深入地拟合语言信息。</font>
+
 对应整体结构图中的Multi——Head Attention
 
 1、扩展了模型专注于不同位置的能力。
@@ -155,6 +266,95 @@ print(output)
 前馈层只需要一个矩阵，则把得到的8个矩阵拼接在一起，然后用一个附加的权重矩阵![image](/images/f9a64a46870a19bf45220c1abefc7eec.svg)与它们相乘。
 
 ![](/images/6a6c96b09e1bd0b827796ec72b7c9e7a.png)
+
+![](/images/b19bab71843a83c43b11f729576761e7.png)
+
+```python
+import torch.nn as nn
+import torch
+
+'''多头自注意力计算模块'''
+class MultiHeadAttention(nn.Module):
+
+    def __init__(self, args: ModelArgs, is_causal=False):
+        # 构造函数
+        # args: 配置对象
+        super().__init__()
+        
+        # 隐藏层维度必须是头数的整数倍，因为后面我们会将输入拆成头数个矩阵
+        assert args.dim % args.n_heads == 0
+        # 每个头的维度，等于模型维度除以头的总数。
+        self.head_dim = args.dim // args.n_heads
+        self.n_heads = args.n_heads
+
+        # Wq, Wk, Wv 参数矩阵，每个参数矩阵为 n_embd x dim
+        # 这里通过三个组合矩阵来代替了n个参数矩阵的组合，其逻辑在于矩阵内积再拼接其实等同于拼接矩阵再内积，
+        # 不理解的读者可以自行模拟一下，每一个线性层其实相当于n个参数矩阵的拼接
+        self.wq = nn.Linear(args.n_embd, self.n_heads * self.head_dim, bias=False)
+        self.wk = nn.Linear(args.n_embd, self.n_heads * self.head_dim, bias=False)
+        self.wv = nn.Linear(args.n_embd, self.n_heads * self.head_dim, bias=False)
+        # 输出权重矩阵，维度为 dim x dim（head_dim = dim / n_heads）
+        self.wo = nn.Linear(self.n_heads * self.head_dim, args.dim, bias=False)
+        # 注意力的 dropout
+        self.attn_dropout = nn.Dropout(args.dropout)
+        # 残差连接的 dropout
+        self.resid_dropout = nn.Dropout(args.dropout)
+        self.is_causal = is_causal
+
+        # 创建一个上三角矩阵，用于遮蔽未来信息
+        # 注意，因为是多头注意力，Mask 矩阵比之前我们定义的多一个维度
+        if is_causal:
+            mask = torch.full((1, 1, args.max_seq_len, args.max_seq_len), float("-inf"))
+            mask = torch.triu(mask, diagonal=1)
+            # 注册为模型的缓冲区
+            self.register_buffer("mask", mask)
+
+    def forward(self, q: torch.Tensor, k: torch.Tensor, v: torch.Tensor):
+
+        # 获取批次大小和序列长度，[batch_size, seq_len, dim]
+        bsz, seqlen, _ = q.shape
+
+        # 计算查询（Q）、键（K）、值（V）,输入通过参数矩阵层，维度为 (B, T, n_embed) x (n_embed, dim) -> (B, T, dim)
+        xq, xk, xv = self.wq(q), self.wk(k), self.wv(v)
+
+        # 将 Q、K、V 拆分成多头，维度为 (B, T, n_head, dim // n_head)，然后交换维度，变成 (B, n_head, T, dim // n_head)
+        # 因为在注意力计算中我们是取了后两个维度参与计算
+        # 为什么要先按B*T*n_head*C//n_head展开再互换1、2维度而不是直接按注意力输入展开，是因为view的展开方式是直接把输入全部排开，
+        # 然后按要求构造，可以发现只有上述操作能够实现我们将每个头对应部分取出来的目标
+        xq = xq.view(bsz, seqlen, self.n_heads, self.head_dim)
+        xk = xk.view(bsz, seqlen, self.n_heads, self.head_dim)
+        xv = xv.view(bsz, seqlen, self.n_heads, self.head_dim)
+        xq = xq.transpose(1, 2)
+        xk = xk.transpose(1, 2)
+        xv = xv.transpose(1, 2)
+
+        # 注意力计算
+        # 计算 QK^T / sqrt(d_k)，维度为 (B, nh, T, hs) x (B, nh, hs, T) -> (B, nh, T, T)
+        scores = torch.matmul(xq, xk.transpose(2, 3)) / math.sqrt(self.head_dim)
+        # 掩码自注意力必须有注意力掩码
+        if self.is_causal:
+            assert hasattr(self, 'mask')
+            # 这里截取到序列长度，因为有些序列可能比 max_seq_len 短
+            scores = scores + self.mask[:, :, :seqlen, :seqlen]
+        # 计算 softmax，维度为 (B, nh, T, T)
+        scores = F.softmax(scores.float(), dim=-1).type_as(xq)
+        # 做 Dropout
+        scores = self.attn_dropout(scores)
+        # V * Score，维度为(B, nh, T, T) x (B, nh, T, hs) -> (B, nh, T, hs)
+        output = torch.matmul(scores, xv)
+
+        # 恢复时间维度并合并头。
+        # 将多头的结果拼接起来, 先交换维度为 (B, T, n_head, dim // n_head)，再拼接成 (B, T, n_head * dim // n_head)
+        # contiguous 函数用于重新开辟一块新内存存储，因为Pytorch设置先transpose再view会报错，
+        # 因为view直接基于底层存储得到，然而transpose并不会改变底层存储，因此需要额外存储
+        output = output.transpose(1, 2).contiguous().view(bsz, seqlen, -1)
+
+        # 最终投影回残差流。
+        output = self.wo(output)
+        output = self.resid_dropout(output)
+        return output
+
+```
 
 **<font style="color:rgb(77, 77, 77);">总结整个流程：</font>**![](/images/74f87b91c20608543934baa83a518e58.png)
 
@@ -699,11 +899,11 @@ print("Output shape:", output.shape)
 
 <font style="color:rgb(77, 77, 77);">让我们在Python中实现完整的Transformer模型：</font>
 
-```plain
+```python
 # TRANSFORMER的实现
 class Transformer(nn.Module):
     def __init__(self, src_vocab_size, tgt_vocab_size, d_model, num_heads, num_layers, d_ff,
-    max_len, dropout):
+                 max_len, dropout):
         super(Transformer, self).__init__()
 
         # 定义编码器和解码器的词嵌入层
@@ -715,9 +915,9 @@ class Transformer(nn.Module):
 
         # 定义编码器和解码器的多层堆叠
         self.encoder_layers = nn.ModuleList([EncoderLayer(d_model, num_heads, d_ff, dropout)
-        for _ in range(num_layers)])
+                                             for _ in range(num_layers)])
         self.decoder_layers = nn.ModuleList([DecoderLayer(d_model, num_heads, d_ff, dropout)
-        for _ in range(num_layers)])
+                                             for _ in range(num_layers)])
 
         # 定义线性层
         self.linear = nn.Linear(d_model, tgt_vocab_size)
@@ -768,7 +968,7 @@ max_len = 100
 dropout = 0.1
 
 transformer = Transformer(src_vocab_size, tgt_vocab_size, d_model, num_heads, num_layers, 
-d_ff, max_len, dropout)
+                          d_ff, max_len, dropout)
 
 # 生成随机示例数据
 src_data = torch.randint(1, src_vocab_size, (5, max_len))  # (batch_size, seq_length)
