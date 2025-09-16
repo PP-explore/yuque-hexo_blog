@@ -1,11 +1,12 @@
 ---
 title: VGG16
 date: '2024-12-30 16:38:43'
-updated: '2025-09-10 11:01:01'
+updated: '2025-09-16 20:40:30'
 categories:
   - 人工智能
 tags:
   - 深度学习
+  - 经典网络
 cover: /images/custom-cover.jpg
 recommend: true
 ---
@@ -15,6 +16,8 @@ recommend: true
 证明了增加深度，神经网络性能更好。  
 小卷积核串联可以获得与大卷积核相同的感受野。  
 AlexNet中的局部响应归一化作用不明显。
+
+![](/images/88138123f84934947f992ee132c0925a.png)
 
 网络结构
 
