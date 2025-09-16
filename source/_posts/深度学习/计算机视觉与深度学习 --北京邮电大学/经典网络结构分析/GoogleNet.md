@@ -1,11 +1,12 @@
 ---
 title: GoogleNet
 date: '2024-12-30 17:03:13'
-updated: '2025-08-22 18:00:10'
+updated: '2025-09-16 20:40:39'
 categories:
   - 人工智能
 tags:
   - 深度学习
+  - 经典网络
 cover: /images/custom-cover.jpg
 recommend: true
 ---

@@ -1,11 +1,12 @@
 ---
 title: ResNet
 date: '2024-06-17 20:40:59'
-updated: '2025-08-22 18:01:02'
+updated: '2025-09-16 20:43:31'
 categories:
   - 人工智能
 tags:
   - 深度学习
+  - 经典网络
 cover: /images/custom-cover.jpg
 recommend: true
 ---

@@ -1,11 +1,12 @@
 ---
 title: LeNet-5
 date: '2024-12-30 15:09:40'
-updated: '2025-08-22 18:00:05'
+updated: '2025-09-16 20:40:18'
 categories:
   - 人工智能
 tags:
   - 深度学习
+  - 经典网络
 cover: /images/custom-cover.jpg
 recommend: true
 ---
