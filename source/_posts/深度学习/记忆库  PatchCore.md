@@ -1,7 +1,7 @@
 ---
 title: 记忆库  PatchCore
 date: '2025-09-03 14:33:03'
-updated: '2025-09-12 14:42:01'
+updated: '2025-10-15 14:34:30'
 ---
 ![](/images/1fb3087ae48e21ec8dd000b1da24b9a3.png)
 
